@@ -1,0 +1,3223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hebraico</title>
+    <style>
+        .tecla{
+            background-color: aqua;
+            width: fit-content;
+        }
+        a{
+            cursor: pointer;
+            font-size: 25px;
+            padding: 17px;
+        }
+        a:hover{
+            color: rgb(248, 8, 8);
+        }
+        h2{
+            font-size: 27px;
+            background-color: darkkhaki;
+            color: blue;
+        }
+        h3{
+            font-size: 27px;
+            background-color: darkkhaki;
+            color: blue;
+        }
+        h4{
+            font-size: 27px;
+            background-color: darkkhaki;
+            color: rgb(255, 0, 0);
+            
+        }
+        .btn{
+            display: none;
+            margin-left: 40%;
+            background-color: darkgreen;
+            color: aliceblue;
+            font-size: 25px;
+            margin-top: 15px;
+            padding: 10px;
+                }
+                .caixa{
+                    position: absolute;
+                    display: none;
+                    background-color: rgb(255, 115, 0);
+                    width: fit-content;
+                    margin-left: 40%;
+                    margin-top: -50px;
+                    border-radius: 15px;
+                    
+                }
+                .sem{
+                    cursor: pointer;
+                }
+                .sem:hover{
+                    color: blue;
+                }
+                .port{
+                    font-size: 17px;
+                }
+                marquee{
+                  font-size: 18px;
+                  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                }
+                
+    </style>
+</head>
+<body>
+   <marquee behavior="" direction="">Comunidade B´ney Isra´el</marquee>
+    <h1 align="center">Letra do Hebraico</h1><br>
+    <h2 class="display" align="center"></h2>
+    
+    <h3 class="trad" align="center"></h3>
+    <h4 class="form" align="center"></h4>
+    <h5 class="port" align="center"></h5>
+    <table class="tecla" align="center">
+        <tr>
+            <td>
+                <a class="t1">א</a><a class="t2">בּ</a><a class="t42">ב</a><a class="t3">ג</a><a class="t45">גּ</a><a class="t4">ד</a><a class="t5">ה</a><a class="t6">ו</a><br><br>
+                <a class="t7">ז</a><a class="t8">ח</a><a class="t9">ט</a><a class="t10">י</a><a class="t11">כּ</a><a class="t12">כ</a><a class="t13">ך</a><a class="t14">ל</a><br><br>
+                <a class="t15">מ</a><a class="t16">ם</a><a class="t17">נ</a><a class="t18">ן</a><a class="t19">ס</a><a class="t20">ע</a><a class="t21">פ</a><a class="t22">פּ</a><br><br>
+                <a class="t23">ף</a><a class="t24">צ</a><a class="t25">ץ</a><a class="t26">ק</a><a class="t27">ר</a><a class="t28">שׁ</a><a class="t29">שׂ</a><a class="t46">&#xFB49;</a><br><br>
+                <a class="t30">ת</a><a class="t31">ָ</a><a class="t32">ַ</a><a class="t34">ֵ</a><a class="t35">ֶ</a><a class="t36">ֱ</a><a class="t37">ִ</a><a class="t38">ֹ</a><br><br>    
+                <a class="t41">וּ</a></a><a class="t40">ֻ</a><a class="t39">ֳ</a><a class="t47">וֹ</a><a class="t43">&#x5B2;</a><a class="t44">&#1456;</a><br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br><a href="">Limpar campo</a>&nbsp;&nbsp;<a class="espaso">Espaço</a>
+            </td>
+        </tr>
+    </table><br>
+    <audio src="/alfbt/sin.mp3"></audio>
+    <div class="caixa" align="center">
+        <a class="v1">ָ  ã</a><a class="v7">ַ a</a><a class="v9"> ֲa</a><br><br>
+        <a class="v2">ֵ e</a><a class="v8">ֶe</a><a class="v6">ְ ë</a><br><br>
+        <a class="v3">ִ i</a><br><br>
+        <a class="v4">ֹ  o</a><br><br>
+        <a class="v5">ֻ u</a>
+        <br><br><br>
+        <a class="sem"> sem voguais</a>
+        <br><br>
+        <a class="sair"> Sair</a>
+
+
+    </div>
+    
+    
+    <button class="btn">usar o sofit</button>
+
+    <br><br>
+
+    <script>
+        var btn= document.querySelector(".btn")
+        var visou= document.querySelector(".display")
+        var h3 = document.querySelector(".trad")
+        var form = document.querySelector(".form")
+        var caixa = document.querySelector(".caixa")
+        var tecla = document.querySelector(".tecla")
+
+       /*-----------variaves das consoantes-------------------*/
+        var t1 = document.querySelector(".t1")
+        var t2 = document.querySelector(".t2")
+        var t3 = document.querySelector(".t3")
+        var t4 = document.querySelector(".t4")
+        var t5 = document.querySelector(".t5")
+        var t6 = document.querySelector(".t6")
+        var t7 = document.querySelector(".t7")
+        var t8 = document.querySelector(".t8")
+        var t9 = document.querySelector(".t9")
+        var t10 = document.querySelector(".t10")
+        var t11 = document.querySelector(".t11")
+        var t12 = document.querySelector(".t12")
+        var t13 = document.querySelector(".t13")
+        var t14 = document.querySelector(".t14")
+        var t15 = document.querySelector(".t15")
+        var t16 = document.querySelector(".t16")
+        var t17 = document.querySelector(".t17")
+        var t18 = document.querySelector(".t18")
+        var t19= document.querySelector(".t19")
+        var t20 = document.querySelector(".t20")
+        var t21 = document.querySelector(".t21")
+        var t22 = document.querySelector(".t22")
+        var t23 = document.querySelector(".t23")
+        var t24 = document.querySelector(".t24")
+        var t25 = document.querySelector(".t25")
+        var t26 = document.querySelector(".t26")
+        var t27 = document.querySelector(".t27")
+        var t28 = document.querySelector(".t28")
+        var t29 = document.querySelector(".t29")
+        var t30 = document.querySelector(".t30")
+        var t31 = document.querySelector(".t31")
+        var t32 = document.querySelector(".t32")
+        
+        var t34 = document.querySelector(".t34")
+        var t35 = document.querySelector(".t35")
+        var t36 = document.querySelector(".t36")
+        var t37 = document.querySelector(".t37")
+        var t38 = document.querySelector(".t38")
+        var t39 = document.querySelector(".t39")
+        var t40 = document.querySelector(".t40")
+        var t41 = document.querySelector(".t41")
+        var t42 = document.querySelector(".t42")
+        var t43 = document.querySelector(".t43")
+        var t44 = document.querySelector(".t44")
+        var t45 = document.querySelector(".t45")
+        var t46 = document.querySelector(".t46")
+        var t47 = document.querySelector(".t47")
+        let com =0
+        var sofit=0
+        var port= document.querySelector(".port")
+        var usar=0
+
+        /*-----------------variaves das voguais----------------------*/
+        var sem = document.querySelector(".sem")
+        var v1 = document.querySelector(".v1")
+        var v2 = document.querySelector(".v2")
+        var v3 = document.querySelector(".v3")
+        var v4 = document.querySelector(".v4")
+        var v5 = document.querySelector(".v5")
+        var v6 = document.querySelector(".v6")
+        var v7 = document.querySelector(".v7")
+        var v8 = document.querySelector(".v8")
+        var v9 = document.querySelector(".v9")
+        var v10 = document.querySelector(".v10")
+        var v11 = document.querySelector(".v11")
+        
+
+
+        /* a baixo as consoantes*/
+        var alef=[
+            "",
+           /*a*/ "אָ",
+           /*ê*/ "אֵ",
+           /*i*/ "אִ",
+           /*ô*/"אֹ",
+           /*u*/ "אֻ"       
+        
+        
+        ]
+        var bet=[
+            "",
+            "בָּ",
+            "בֵּ",
+            "בִּ",
+            "בֹּ",
+            "בֻּ",
+
+        ]
+        var guimel=[
+            "",
+            "גָ",
+            "גֵ",
+            "גִ",
+            "גֹ",
+            "גֻ",
+            
+        ]
+        var dalet=[
+            "",
+            "דָ",
+            "דֵ",
+            "דִ",
+            "דֹ",
+            "דֻ"
+        ]
+        var he=[
+            "",
+            "הָ",
+            "הֵ",
+            "הִ",
+            "הֹ",
+            "הֻ",
+        ]
+        var vav=[
+            "",
+            "וָ",
+            "וֵ",
+            "וִ",
+            "וֹ",
+            "וֻ"
+        ]
+        var zayin=[
+            "",
+            "זָ",
+            "זֵ",
+            "זִ",
+            "זֹ",
+            "זֻ",
+        ]
+        var Het=[
+            "",
+            "חָ",
+            "חֵ",
+            "חִ",
+            "חֹ",
+            "חֻ",
+        ]
+        var tet=[
+            "",
+            "טָ",
+            "טֵ",
+            "טִ",
+            "טֹ",
+            "טֻ",
+        ]
+        var yod=[
+            "",
+            "יַ",
+            "יֵ",
+            "יִ",
+            "יֹ",
+            "יֻ",
+
+        ]
+        var kaf=[
+            "",
+            "כָּ",
+            "כֵּ",
+            "כִּ",
+            "כֹּ",
+            "כֻּ",
+        ]
+       var kafm=[
+        "",
+        "כָ",
+        "כֵ",
+        "כִ",
+        "כֹ",
+        "כֻ",
+       ]
+       var lamed=[
+        "",
+        "לָ",
+        "לֵ",
+        "לִ",
+        "לֹ",
+        "לֻ",
+
+       ]
+       var mem=[
+        "",
+        "מָ",
+        "מֵ",
+        "מִ",
+        "מֹ",
+        "מֻ",
+
+       ]
+       var num=[
+        "",
+        "נָ",
+        "נֵ",
+        "נִ",
+        "נֹ",
+        "נֻ ",
+
+       ]
+       var samek=[
+        "",
+        "סָ",
+        "סֵ",
+        "סִ",
+        "סֹ",
+        "סֻ",
+
+       ]
+       var ayin=[
+        "",
+        "עָ",
+        "עֵ",
+        "עִ",
+        "עֹ",
+        "עֻ",
+
+       ]
+       var fe=[
+        "",
+        "פָ",
+        "פֵ",
+        "פִ",
+        "פֹֹ",
+        "פֻ",
+
+       ]
+       var pe=[
+        "",
+        "פָּ",
+        "פֵּ",
+        "פִּ",
+        "פֹּ",
+        "פֻּ",
+        
+
+       ]
+       var tsadi=[
+        "",
+        "צָָָָ",
+        "צֵ",
+        "צִ",
+        "צֹ",
+        "צֻ",
+
+       ]
+       var qof=[
+        "",
+        "קָָ",
+        "קֵ",
+        "קִ",
+        "קֹ",
+        "קֻ",
+
+       ]
+       var resh=[
+        "",
+        "רָ",
+        "רֵ",
+        "רִ",
+        "רֹֹ",
+        "רֻ",
+        
+
+       ]
+       var shin=[
+        "",
+        "שָׁ",
+        "שֵׁ",
+        "שִׁ",
+        "שֹׁ",
+        "שֻׁ",
+
+       ]
+       var sin=[
+        "",
+        "שָׂ",
+        "שֵׂ",
+        "שִׂ",
+        "שֹׂ",
+        "שֻׂ",
+
+       ]
+       var tav=[
+        "",
+        "תָ",
+        "תֵ",
+        "תִ",
+        "תֹ",
+        "תֻ",
+
+       ]
+       var betsem=[
+        "",
+        "בָ",
+        "בֵ",
+        "בִ",
+        "בֹ",
+        "בֻ",
+
+       ]
+       var shsh=[
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+
+       ]
+       var guimeldag=[
+        "",
+        "גָּ",
+        "גַּ",
+        "גֵּ",
+        "גֶּ",
+        "גִּ",
+        "גֻּ",
+        
+
+       ]
+       var usesheva=[
+        "",
+        "",
+       ]
+        
+      
+       var posit =""
+       var esp=document.querySelector(".espaso")
+        esp.addEventListener("click",()=>{
+          port.textContent=port.textContent+" "
+          form.textContent=form.textContent+" "
+          posit="Space"
+        })
+      
+       
+
+
+        t1.addEventListener("click",()=>{
+            visou.textContent="א"+",  "+"Alef" 
+                h3.textContent="'"
+                
+              usar=1  
+             com=1
+             caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+             
+        })
+
+        t2.addEventListener("click",()=>{
+            visou.textContent="בּ"+" , "+"Bet com daguesh"
+                h3.textContent="b"
+                usar=2
+                com=2
+                caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+             
+        })
+
+        t3.addEventListener("click",()=>{
+             visou.textContent="ג"+" , "+"Guímel"
+             h3.textContent="g"
+             usar=3
+             com=3
+             caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+        })
+
+        t4.addEventListener("click",()=>{
+             visou.textContent="ד"+" , "+"Dalet"
+             h3.textContent="d"
+             usar=4
+            com=4
+            caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+
+        })
+        t5.addEventListener("click",()=>{
+             visou.textContent="ה"+" , "+"He"
+             h3.textContent="h"
+             usar=5
+            com=5
+            caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+
+        })
+        t6.addEventListener("click",()=>{
+             visou.textContent="ו"+" ,vav  com  som de v "
+             h3.textContent="v"
+             usar=6
+            com=6
+            caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+
+        })
+        t7.addEventListener("click",()=>{
+             visou.textContent="ז"+" , "+"Zayin"
+             h3.textContent="z"
+             usar=7
+           com=7
+            caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+
+
+
+        })
+        t8.addEventListener("click",()=>{
+             visou.textContent="ח"+" , "+"Het"
+             h3.textContent="ch som rr"
+             usar=8
+            com=8
+            caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+
+
+        })
+        t9.addEventListener("click",()=>{
+            visou.textContent="ט"+" , "+"Tet"
+            h3.textContent="t"
+            usar=9
+            com=9
+            caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+
+
+        })
+        t10.addEventListener("click",()=>{
+            visou.textContent="י"+" , "+"Yod"
+            h3.textContent="y"
+            usar=10
+            com=10
+            caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+
+        })
+        t11.addEventListener("click",()=>{
+            visou.textContent="כּ"+" , "+"kaf"
+            h3.textContent="k"
+            usar=11
+            com=11
+            caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+
+        })
+        t12.addEventListener("click",()=>{
+        
+            visou.textContent="כ"+" , "+"kaf"
+           h3.textContent="ch no meio de palavras"
+           usar=12
+           com=12
+            caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+
+
+        })
+        t13.addEventListener("click",()=>{
+            
+            visou.textContent="ך"+" , "+"Kaf sofit"
+            h3.textContent="ch no final de frase"
+            btn.style.display="block"
+            sofit=1
+
+
+        })
+        t14.addEventListener("click",()=>{
+            visou.textContent="ל"+" , "+"Lamed"
+            h3.textContent="L"
+            usar=13
+           com=13
+            caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+
+
+        })
+        t15.addEventListener("click",()=>{
+            visou.textContent="מ"+" , "+"Mem"
+            h3.textContent="m"
+            usar=14
+            com=14
+            caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+
+
+        })
+        t16.addEventListener("click",()=>{
+            visou.textContent="ם"+" , "+"mem sofit"
+            h3.textContent="m no final de palavras"
+           
+            
+             btn.style.display="block"
+             sofit=2
+
+
+        })
+         t17.addEventListener("click",()=>{
+            visou.textContent="נ"+" , "+"Nun"
+            h3.textContent="n"
+            usar=15
+            com=15
+            caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+
+
+         })
+         t18.addEventListener("click",()=>{
+            visou.textContent="ן"+" , "+"nun sofit"
+            h3.textContent="n no final das palavras"
+          
+            
+             btn.style.display="block"
+             sofit=3
+
+
+         })
+         t19.addEventListener("click",()=>{
+            visou.textContent="ס"+" , "+"Samek"
+            h3.textContent="s"
+            usar=16
+            com=16
+            caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+
+
+         })
+         t20.addEventListener("click",()=>{
+            visou.textContent="ע"+" , "+"Ayin"
+            h3.textContent=" sem som"
+            usar=17
+            com=17
+            caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+
+
+         })
+         t21.addEventListener("click",()=>{
+            visou.textContent="פ"+" , "+"fe"
+            h3.textContent="f"
+            usar=18
+            com=18
+            caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+
+
+         })
+         t22.addEventListener("click",()=>{
+            visou.textContent="פּ"+" , "+"Pe"
+            h3.textContent="p"
+            usar=19
+            com=19
+            caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+
+
+         })
+         t23.addEventListener("click",()=>{
+            visou.textContent="ף"+" , "+"pe sofit"
+            h3.textContent=" f no final de frase"
+            
+            btn.style.display="block"
+            sofit=4
+
+
+         })
+         t24.addEventListener("click",()=>{
+            visou.textContent="צ"+" , "+"Tsadi"
+            h3.textContent="ts"
+            usar=20
+           com=20
+            caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+
+
+         })
+         t25.addEventListener("click",()=>{
+            visou.textContent="ץ"+" , "+"tsadi sofit"
+            h3.textContent="ts no final de frase"
+           
+            btn.style.display="block"
+            sofit=5
+
+
+         })
+         t26.addEventListener("click",()=>{
+            visou.textContent="ק"+" , "+"Qof"
+            h3.textContent="Q"
+            usar=21
+           com=21
+            caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+
+
+         })
+         t27.addEventListener("click",()=>{
+            visou.textContent="ר"+" , "+"Resh"
+            h3.textContent="R"
+            usar=22
+            com=22
+            caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+
+
+         })
+         t28.addEventListener("click",()=>{
+            visou.textContent="שׁ"+" , "+"Shin"
+            h3.textContent="sh"
+            usar=23
+            com=23
+            caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+
+
+         })
+         t29.addEventListener("click",()=>{
+            visou.textContent="שׂ"+" , "+"sin"
+            h3.textContent="s"
+            usar=24
+            com=24
+            caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+
+
+         })
+         t30.addEventListener("click",()=>{
+            visou.textContent="ת"+" , "+"Tav"
+            h3.textContent="T"
+            usar=25
+           com=25
+            caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+
+
+         })
+         t31.addEventListener("click",()=>{
+            visou.textContent="ָ"
+            h3.textContent="a, chataf  "
+            
+        
+
+         })
+         t32.addEventListener("click",()=>{
+            visou.textContent="ַ"
+            h3.textContent="a, Kamatz vogual curta"
+            
+         })
+         t34.addEventListener("click",()=>{
+            visou.textContent="ֵ"
+            h3.textContent="ê, tsere"
+         })
+         t35.addEventListener("click",()=>{
+            visou.textContent="ֶ"
+            h3.textContent="e,  segol"
+         })
+         t36.addEventListener("click",()=>{
+            visou.textContent="ֱ"
+            h3.textContent="E, reduzido chatef-sego"
+         })
+         t37.addEventListener("click",()=>{
+            visou.textContent="ִ"
+            h3.textContent="i, chiriq"
+         })
+         t38.addEventListener("click",()=>{
+            visou.textContent="ֹ"
+            h3.textContent="ô, cholam"
+         })
+         t39.addEventListener("click",()=>{
+            visou.textContent="ֳ"
+            h3.textContent="ó, reduzido chatef-qamets"
+         })
+         t40.addEventListener("click",()=>{
+            visou.textContent="ֻ"
+            h3.textContent="u, qibbuts"
+         })
+         t41.addEventListener("click",()=>{
+            visou.textContent="וּ"
+            h3.textContent="u, shurek "
+         })
+         t42.addEventListener("click",()=>{
+            visou.textContent="ב, Bet sem o daguesh"
+            h3.textContent="v"
+            usar=26
+            com=26
+            caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+         })
+         t43.addEventListener("click",()=>{
+            visou.textContent="ֲ          a chataf Patah"
+            h3.textContent="ֲ  "
+            
+           
+         })
+         t44.addEventListener("click",()=>{
+            visou.textContent="Sheva no inicio de palavra é E, no meio e sem som divisou de silabas"
+            h3.textContent="ְ"
+            
+         })
+         t45.addEventListener("click",()=>{
+             visou.textContent="גּ"+" , "+"Guímel com daguesh"
+             h3.textContent="g"
+             usar=28
+             com=27
+             caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+             
+        })
+        t46.addEventListener("click",()=>{
+            visou.textContent="שּ"+  "  , Shin com daguesh"
+            h3.textContent="sh"
+           
+
+
+         })
+         t47.addEventListener("click",()=>{
+          visou.textContent="וֹ , vav com cholam"
+          h3.textContent="ô"
+          usar= 27
+          caixa.style.display="block"
+             tecla.style.display="none"
+             btn.style.display="none"
+         })
+
+
+         /*------usar só as consoantes---*/
+
+         sem.addEventListener("click",()=>{
+           if (usar==1) {
+            form.textContent=form.textContent+"א"
+            port.textContent=port.textContent+"`"
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==2) {
+            form.textContent=form.textContent+"בּ"
+            port.textContent=port.textContent+"b"
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==3) {
+            form.textContent=form.textContent+"ג"
+            port.textContent=port.textContent+"g"
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==4) {
+            form.textContent=form.textContent+"ד"
+            port.textContent=port.textContent+"d"
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==5) {
+            form.textContent=form.textContent+"ה"
+            port.textContent=port.textContent+"h"
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==6) {
+            form.textContent=form.textContent+"ו"
+            port.textContent=port.textContent+"w"
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==7) {
+            form.textContent=form.textContent+"ז"
+            port.textContent=port.textContent+"z"
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==8) {
+            form.textContent=form.textContent+"ח"
+            port.textContent=port.textContent+"ch"
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==9) {
+            form.textContent=form.textContent+"ט"
+            port.textContent=port.textContent+"t"
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==10) {
+            form.textContent=form.textContent+"י"
+            port.textContent=port.textContent+"y"
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==11) {
+            form.textContent=form.textContent+"כּ"
+            port.textContent=port.textContent+"k"
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==12) {
+            form.textContent=form.textContent+"כ"
+            port.textContent=port.textContent+"ch"
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==13) {
+            form.textContent=form.textContent+"ל"
+            port.textContent=port.textContent+"l"
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==14) {
+            form.textContent=form.textContent+"מ"
+            port.textContent=port.textContent+"m"
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==15) {
+            form.textContent=form.textContent+"נ"
+            port.textContent=port.textContent+"n"
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==16) {
+            form.textContent=form.textContent+"ס"
+            port.textContent=port.textContent+"s"
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==17) {
+            form.textContent=form.textContent+"ע"
+            port.textContent=port.textContent+""
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==18) {
+            form.textContent=form.textContent+"פ"
+            port.textContent=port.textContent+"f"
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==19) {
+            form.textContent=form.textContent+"פּ"
+            port.textContent=port.textContent+"p"
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==20) {
+            form.textContent=form.textContent+"צ"
+            port.textContent=port.textContent+"ts"
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==21) {
+            form.textContent=form.textContent+"ק"
+            port.textContent=port.textContent+"q"
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==22) {
+            form.textContent=form.textContent+"ר"
+            port.textContent=port.textContent+"r"
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==23) {
+            form.textContent=form.textContent+"שׁ"
+            port.textContent=port.textContent+"sh"
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==24) {
+            form.textContent=form.textContent+"שׂ"
+            port.textContent=port.textContent+"s"
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==25) {
+            form.textContent=form.textContent+"ת"
+            port.textContent=port.textContent+"t"
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==26) {
+            form.textContent=form.textContent+"ב"
+            port.textContent=port.textContent+"v"
+            tecla.style.display="block"
+            caixa.style.display="none"
+
+
+           }
+           if (usar==27) {
+            form.textContent=form.textContent+"וֹ"
+            port.textContent=port.textContent+"ô"
+            tecla.style.display="block"
+            caixa.style.display="none"
+            
+           }
+           if (usar==28) {
+            form.textContent=form.textContent+"גּ"
+            port.textContent=port.textContent+"g"
+            tecla.style.display="block"
+            caixa.style.display="none"
+            
+           }
+            
+         })
+         
+         
+
+         
+         
+         var sair=document.querySelector(".sair")
+         sair.addEventListener("click",()=>{
+            tecla.style.display="block"
+            caixa.style.display="none"
+         })
+
+
+         /*****forma silabas com vogais*****/
+         
+        var vogalcurt=""
+         
+         v1.addEventListener("click",()=>{
+            if(com==1){
+            if (form.textContent=="") {
+                form.textContent=alef[1]
+                port.textContent="ã"
+               
+            } else {
+              form.textContent=form.textContent+alef[1]
+              port.textContent=port.textContent+"ã"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==2){
+            if (form.textContent=="") {
+                form.textContent=bet[1]
+                port.textContent="bã"
+               
+            } else {
+              form.textContent=form.textContent+bet[1]
+              port.textContent=port.textContent+"bã"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==3){
+            if (form.textContent=="") {
+                form.textContent=guimel[1]
+                port.textContent="gã"
+               
+            } else {
+              form.textContent=form.textContent+guimel[1]
+              port.textContent=port.textContent+"gã"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==4){
+            if (form.textContent=="") {
+                form.textContent=dalet[1]
+                port.textContent="dã"
+               
+            } else {
+              form.textContent=form.textContent+dalet[1]
+              port.textContent=port.textContent+"dã"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==5){
+            if (form.textContent=="") {
+                form.textContent=he[1]
+                port.textContent="hã"
+               
+            } else {
+              form.textContent=form.textContent+he[1]
+              port.textContent=port.textContent+"hã"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==6){
+            if (form.textContent=="") {
+                form.textContent=vav[1]
+                port.textContent="wã"
+               
+            } else {
+              form.textContent=form.textContent+vav[1]
+              port.textContent=port.textContent+"wã"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==7){
+            if (form.textContent=="") {
+                form.textContent=zayin[1]
+                port.textContent="zã"
+               
+            } else {
+              form.textContent=form.textContent+zayin[1]
+              port.textContent=port.textContent+"zã"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==8){
+            if (form.textContent=="") {
+                form.textContent=Het[1]
+                port.textContent="chã"
+               
+            } else {
+              form.textContent=form.textContent+Het[1]
+              port.textContent=port.textContent+"chã"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==9){
+            if (form.textContent=="") {
+                form.textContent=tet[1]
+                port.textContent="tã"
+               
+            } else {
+              form.textContent=form.textContent+tet[1]
+              port.textContent=port.textContent+"tã"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==10){
+            if (form.textContent=="") {
+                form.textContent=yod[1]
+                port.textContent="yã"
+               
+            } else {
+              form.textContent=form.textContent+yod[1]
+              port.textContent=port.textContent+"yã"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==11){
+            if (form.textContent=="") {
+                form.textContent=kaf[1]
+                port.textContent="kã"
+               
+            } else {
+              form.textContent=form.textContent+kaf[1]
+              port.textContent=port.textContent+"kã"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==12){
+            if (form.textContent=="") {
+                form.textContent=kafm[1]
+                port.textContent="chã"
+               
+            } else {
+              form.textContent=form.textContent+kafm[1]
+              port.textContent=port.textContent+"chã"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==13){
+            if (form.textContent=="") {
+                form.textContent=lamed[1]
+                port.textContent="lã"
+               
+            } else {
+              form.textContent=form.textContent+lamed[1]
+              port.textContent=port.textContent+"lã"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==14){
+            if (form.textContent=="") {
+                form.textContent=mem[1]
+                port.textContent="mã"
+               
+            } else {
+              form.textContent=form.textContent+mem[1]
+              port.textContent=port.textContent+"mã"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==15){
+            if (form.textContent=="") {
+                form.textContent=num[1]
+                port.textContent="nã"
+               
+            } else {
+              form.textContent=form.textContent+num[1]
+              port.textContent=port.textContent+"nã"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==16){
+            if (form.textContent=="") {
+                form.textContent=samek[1]
+                port.textContent="sã"
+               
+            } else {
+              form.textContent=form.textContent+samek[1]
+              port.textContent=port.textContent+"sã"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==17){
+            if (form.textContent=="") {
+                form.textContent=ayin[1]
+                port.textContent="ã"
+               
+            } else {
+              form.textContent=form.textContent+ayin[1]
+              port.textContent=port.textContent+"ã"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==18){
+            if (form.textContent=="") {
+                form.textContent=fe[1]
+                port.textContent="fã"
+               
+            } else {
+              form.textContent=form.textContent+fe[1]
+              port.textContent=port.textContent+"fã"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==19){
+            if (form.textContent=="") {
+                form.textContent=pe[1]
+                port.textContent="pã"
+               
+            } else {
+              form.textContent=form.textContent+pe[1]
+              port.textContent=port.textContent+"pã"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==20){
+            if (form.textContent=="") {
+                form.textContent=tsadi[1]
+                port.textContent="tsã"
+               
+            } else {
+              form.textContent=form.textContent+tsadi[1]
+              port.textContent=port.textContent+"tsã"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==21){
+            if (form.textContent=="") {
+                form.textContent=qof[1]
+                port.textContent="qã"
+               
+            } else {
+              form.textContent=form.textContent+qof[1]
+              port.textContent=port.textContent+"qã"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==22){
+            if (form.textContent=="") {
+                form.textContent=resh[1]
+                port.textContent="rã"
+               
+            } else {
+              form.textContent=form.textContent+resh[1]
+              port.textContent=port.textContent+"rã"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==23){
+            if (form.textContent=="") {
+                form.textContent=shin[1]
+                port.textContent="shã"
+               
+            } else {
+              form.textContent=form.textContent+shin[1]
+              port.textContent=port.textContent+"shã"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==24){
+            if (form.textContent=="") {
+                form.textContent=sin[1]
+                port.textContent="sã"
+               
+            } else {
+              form.textContent=form.textContent+sin[1]
+              port.textContent=port.textContent+"sã"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==25){
+            if (form.textContent=="") {
+                form.textContent=tav[1]
+                port.textContent="tã"
+               
+            } else {
+              form.textContent=form.textContent+tav[1]
+              port.textContent=port.textContent+"tã"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==26){
+            if (form.textContent=="") {
+                form.textContent=betsem[1]
+                port.textContent="vã"
+               
+            } else {
+              form.textContent=form.textContent+betsem[1]
+              port.textContent=port.textContent+"vã"
+
+            }
+
+            }
+            if (com==27) {
+              if (form.textContent=="") {
+                form.textContent=guimeldag[1]
+                port.textContent="gã"
+                
+              } else {
+                form.textContent=form.textContent+guimeldag[1]
+                port.textContent=port.textContent+"gã"
+                
+              }
+              caixa.style.display="none"
+             tecla.style.display="block"
+             com=0 
+            }
+            
+           
+           
+
+
+
+            
+            posit="" 
+         })
+
+
+         v2.addEventListener("click",()=>{
+            if(com==1){
+              if (form.textContent=="") {
+                form.textContent=alef[2]
+                port.textContent=port.textContent+"e"
+                
+            } else {
+              form.textContent=form.textContent+alef[2] 
+              port.textContent=port.textContent+"e"
+            } 
+             caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+            }
+            if(com==2){
+            if (form.textContent=="") {
+                form.textContent=bet[2]
+                port.textContent="be"
+               
+            } else {
+              form.textContent=form.textContent+bet[2]
+              port.textContent=port.textContent+"be"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==3){
+            if (form.textContent=="") {
+                form.textContent=guimel[2]
+                port.textContent="gue"
+               
+            } else {
+              form.textContent=form.textContent+guimel[2]
+              port.textContent=port.textContent+"gue"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==4){
+            if (form.textContent=="") {
+                form.textContent=dalet[2]
+                port.textContent="de"
+               
+            } else {
+              form.textContent=form.textContent+dalet[2]
+              port.textContent=port.textContent+"de"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==5){
+            if (form.textContent=="") {
+                form.textContent=he[2]
+                port.textContent="he"
+               
+            } else {
+              form.textContent=form.textContent+he[2]
+              port.textContent=port.textContent+"he"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==6){
+            if (form.textContent=="") {
+                form.textContent=vav[2]
+                port.textContent="we"
+               
+            } else {
+              form.textContent=form.textContent+vav[2]
+              port.textContent=port.textContent+"we"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==7){
+            if (form.textContent=="") {
+                form.textContent=zayin[2]
+                port.textContent="ze"
+               
+            } else {
+              form.textContent=form.textContent+zayin[2]
+              port.textContent=port.textContent+"ze"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==8){
+            if (form.textContent=="") {
+                form.textContent=Het[2]
+                port.textContent="che"
+               
+            } else {
+              form.textContent=form.textContent+Het[2]
+              port.textContent=port.textContent+"che"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==9){
+            if (form.textContent=="") {
+                form.textContent=tet[2]
+                port.textContent="te"
+               
+            } else {
+              form.textContent=form.textContent+tet[2]
+              port.textContent=port.textContent+"te"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==10){
+            if (form.textContent=="") {
+                form.textContent=yod[2]
+                port.textContent="ye"
+               
+            } else {
+              form.textContent=form.textContent+yod[2]
+              port.textContent=port.textContent+"ye"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==11){
+            if (form.textContent=="") {
+                form.textContent=kaf[2]
+                port.textContent="ke"
+               
+            } else {
+              form.textContent=form.textContent+kaf[2]
+              port.textContent=port.textContent+"ke"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==12){
+            if (form.textContent=="") {
+                form.textContent=kafm[2]
+                port.textContent="che"
+               
+            } else {
+              form.textContent=form.textContent+kafm[2]
+              port.textContent=port.textContent+"che"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==13){
+            if (form.textContent=="") {
+                form.textContent=lamed[2]
+                port.textContent="le"
+               
+            } else {
+              form.textContent=form.textContent+lamed[2]
+              port.textContent=port.textContent+"le"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==14){
+            if (form.textContent=="") {
+                form.textContent=mem[2]
+                port.textContent="me"
+               
+            } else {
+              form.textContent=form.textContent+mem[2]
+              port.textContent=port.textContent+"me"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==15){
+            if (form.textContent=="") {
+                form.textContent=num[2]
+                port.textContent="ne"
+               
+            } else {
+              form.textContent=form.textContent+num[2]
+              port.textContent=port.textContent+"ne"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==16){
+            if (form.textContent=="") {
+                form.textContent=samek[2]
+                port.textContent="se"
+               
+            } else {
+              form.textContent=form.textContent+samek[2]
+              port.textContent=port.textContent+"se"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==17){
+            if (form.textContent=="") {
+                form.textContent=ayin[2]
+                port.textContent="e"
+               
+            } else {
+              form.textContent=form.textContent+ayin[2]
+              port.textContent=port.textContent+"e"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==18){
+            if (form.textContent=="") {
+                form.textContent=fe[2]
+                port.textContent="fe"
+               
+            } else {
+              form.textContent=form.textContent+fe[2]
+              port.textContent=port.textContent+"fe"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==19){
+            if (form.textContent=="") {
+                form.textContent=pe[2]
+                port.textContent="pe"
+               
+            } else {
+              form.textContent=form.textContent+pe[2]
+              port.textContent=port.textContent+"pe"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==20){
+            if (form.textContent=="") {
+                form.textContent=tsadi[2]
+                port.textContent="tse"
+               
+            } else {
+              form.textContent=form.textContent+tsadi[2]
+              port.textContent=port.textContent+"tse"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==21){
+            if (form.textContent=="") {
+                form.textContent=qof[2]
+                port.textContent="qe"
+               
+            } else {
+              form.textContent=form.textContent+qof[2]
+              port.textContent=port.textContent+"qe"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==22){
+            if (form.textContent=="") {
+                form.textContent=resh[2]
+                port.textContent="re"
+               
+            } else {
+              form.textContent=form.textContent+resh[2]
+              port.textContent=port.textContent+"re"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==23){
+            if (form.textContent=="") {
+                form.textContent=shin[2]
+                port.textContent="she"
+               
+            } else {
+              form.textContent=form.textContent+shin[2]
+              port.textContent=port.textContent+"she"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==24){
+            if (form.textContent=="") {
+                form.textContent=sin[2]
+                port.textContent="se"
+               
+            } else {
+              form.textContent=form.textContent+sin[2]
+              port.textContent=port.textContent+"se"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==25){
+            if (form.textContent=="") {
+                form.textContent=tav[2]
+                port.textContent="te"
+               
+            } else {
+              form.textContent=form.textContent+tav[2]
+              port.textContent=port.textContent+"te"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==26){
+            if (form.textContent=="") {
+                form.textContent=betsem[2]
+                port.textContent="ve"
+               
+            } else {
+              form.textContent=form.textContent+betsem[2]
+              port.textContent=port.textContent+"ve"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           
+           
+          
+           
+           
+           
+            
+
+           vogalcurt="ativa"
+           posit="" 
+         })
+
+         v3.addEventListener("click",()=>{
+            if(com==1){
+              if (form.textContent=="") {
+                form.textContent=alef[3]
+                port.textContent="i"
+                
+                
+            } else {
+              form.textContent=form.textContent+alef[3]
+              port.textContent=port.textContent+"i" 
+               
+            }
+              caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+            }
+            if(com==2){
+            if (form.textContent=="") {
+                form.textContent=bet[3]
+                port.textContent="bi"
+               
+            } else {
+              form.textContent=form.textContent+bet[3]
+              port.textContent=port.textContent+"bi"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==3){
+            if (form.textContent=="") {
+                form.textContent=guimel[3]
+                port.textContent="gui"
+               
+            } else {
+              form.textContent=form.textContent+guimel[3]
+              port.textContent=port.textContent+"gui"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==4){
+            if (form.textContent=="") {
+                form.textContent=dalet[3]
+                port.textContent="di"
+               
+            } else {
+              form.textContent=form.textContent+dalet[3]
+              port.textContent=port.textContent+"di"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==5){
+            if (form.textContent=="") {
+                form.textContent=he[3]
+                port.textContent="hi"
+               
+            } else {
+              form.textContent=form.textContent+he[3]
+              port.textContent=port.textContent+"hi"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==6){
+            if (form.textContent=="") {
+                form.textContent=vav[3]
+                port.textContent="wi"
+               
+            } else {
+              form.textContent=form.textContent+vav[3]
+              port.textContent=port.textContent+"wi"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==7){
+            if (form.textContent=="") {
+                form.textContent=zayin[3]
+                port.textContent="zi"
+               
+            } else {
+              form.textContent=form.textContent+zayin[3]
+              port.textContent=port.textContent+"zi"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==8){
+            if (form.textContent=="") {
+                form.textContent=Het[3]
+                port.textContent="chi"
+               
+            } else {
+              form.textContent=form.textContent+Het[3]
+              port.textContent=port.textContent+"chi"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==9){
+            if (form.textContent=="") {
+                form.textContent=tet[3]
+                port.textContent="ti"
+               
+            } else {
+              form.textContent=form.textContent+tet[3]
+              port.textContent=port.textContent+"ti"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==10){
+            if (form.textContent=="") {
+                form.textContent=yod[3]
+                port.textContent="yi"
+               
+            } else {
+              form.textContent=form.textContent+yod[3]
+              port.textContent=port.textContent+"yi"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==11){
+            if (form.textContent=="") {
+                form.textContent=kaf[3]
+                port.textContent="ki"
+               
+            } else {
+              form.textContent=form.textContent+kaf[3]
+              port.textContent=port.textContent+"ki"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==12){
+            if (form.textContent=="") {
+                form.textContent=kafm[3]
+                port.textContent="chi"
+               
+            } else {
+              form.textContent=form.textContent+kafm[3]
+              port.textContent=port.textContent+"chi"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==13){
+            if (form.textContent=="") {
+                form.textContent=lamed[3]
+                port.textContent="li"
+               
+            } else {
+              form.textContent=form.textContent+lamed[3]
+              port.textContent=port.textContent+"li"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==14){
+            if (form.textContent=="") {
+                form.textContent=mem[3]
+                port.textContent="mi"
+               
+            } else {
+              form.textContent=form.textContent+mem[3]
+              port.textContent=port.textContent+"mi"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==15){
+            if (form.textContent=="") {
+                form.textContent=num[3]
+                port.textContent="ni"
+               
+            } else {
+              form.textContent=form.textContent+num[3]
+              port.textContent=port.textContent+"ni"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==16){
+            if (form.textContent=="") {
+                form.textContent=samek[3]
+                port.textContent="si"
+               
+            } else {
+              form.textContent=form.textContent+samek[3]
+              port.textContent=port.textContent+"si"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==17){
+            if (form.textContent=="") {
+                form.textContent=ayin[3]
+                port.textContent="i"
+               
+            } else {
+              form.textContent=form.textContent+ayin[3]
+              port.textContent=port.textContent+"i"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==18){
+            if (form.textContent=="") {
+                form.textContent=fe[3]
+                port.textContent="fi"
+               
+            } else {
+              form.textContent=form.textContent+fe[3]
+              port.textContent=port.textContent+"fi"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==19){
+            if (form.textContent=="") {
+                form.textContent=pe[3]
+                port.textContent="pi"
+               
+            } else {
+              form.textContent=form.textContent+pe[3]
+              port.textContent=port.textContent+"pi"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==20){
+            if (form.textContent=="") {
+                form.textContent=tsadi[3]
+                port.textContent="tsi"
+               
+            } else {
+              form.textContent=form.textContent+tsadi[3]
+              port.textContent=port.textContent+"tsi"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==21){
+            if (form.textContent=="") {
+                form.textContent=qof[3]
+                port.textContent="qi"
+               
+            } else {
+              form.textContent=form.textContent+qof[3]
+              port.textContent=port.textContent+"qi"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==22){
+            if (form.textContent=="") {
+                form.textContent=resh[3]
+                port.textContent="ri"
+               
+            } else {
+              form.textContent=form.textContent+resh[3]
+              port.textContent=port.textContent+"ri"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==23){
+            if (form.textContent=="") {
+                form.textContent=shin[3]
+                port.textContent="shi"
+               
+            } else {
+              form.textContent=form.textContent+shin[3]
+              port.textContent=port.textContent+"shi"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==24){
+            if (form.textContent=="") {
+                form.textContent=sin[3]
+                port.textContent="si"
+               
+            } else {
+              form.textContent=form.textContent+sin[3]
+              port.textContent=port.textContent+"si"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==25){
+            if (form.textContent=="") {
+                form.textContent=tav[3]
+                port.textContent="ti"
+               
+            } else {
+              form.textContent=form.textContent+tav[3]
+              port.textContent=port.textContent+"ti"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==26){
+            if (form.textContent=="") {
+                form.textContent=betsem[3]
+                port.textContent="vi"
+               
+            } else {
+              form.textContent=form.textContent+betsem[3]
+              port.textContent=port.textContent+"vi"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+            
+            
+            
+           posit="" 
+         })
+
+         v4.addEventListener("click",()=>{
+            if(com==1){
+              if (form.textContent=="") {
+                form.textContent=alef[4]
+                port.textContent="o"
+              
+                
+            } else {
+              form.textContent=form.textContent+alef[4]
+              port.textContent=port.textContent+"o" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==2){
+            if (form.textContent=="") {
+                form.textContent=bet[4]
+                port.textContent="bo"
+               
+            } else {
+              form.textContent=form.textContent+bet[4]
+              port.textContent=port.textContent+"bo"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==3){
+            if (form.textContent=="") {
+                form.textContent=guimel[4]
+                port.textContent="go"
+               
+            } else {
+              form.textContent=form.textContent+guimel[4]
+              port.textContent=port.textContent+"go"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==4){
+            if (form.textContent=="") {
+                form.textContent=dalet[4]
+                port.textContent="do"
+               
+            } else {
+              form.textContent=form.textContent+dalet[4]
+              port.textContent=port.textContent+"do"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==5){
+            if (form.textContent=="") {
+                form.textContent=he[4]
+                port.textContent="ho"
+               
+            } else {
+              form.textContent=form.textContent+he[4]
+              port.textContent=port.textContent+"ho"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==6){
+            if (form.textContent=="") {
+                form.textContent=vav[4]
+                port.textContent="wo"
+               
+            } else {
+              form.textContent=form.textContent+vav[4]
+              port.textContent=port.textContent+"wo"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==7){
+            if (form.textContent=="") {
+                form.textContent=zayin[4]
+                port.textContent="zo"
+               
+            } else {
+              form.textContent=form.textContent+zayin[4]
+              port.textContent=port.textContent+"zo"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==8){
+            if (form.textContent=="") {
+                form.textContent=Het[4]
+                port.textContent="cho"
+               
+            } else {
+              form.textContent=form.textContent+Het[4]
+              port.textContent=port.textContent+"cho"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==9){
+            if (form.textContent=="") {
+                form.textContent=tet[4]
+                port.textContent="to"
+               
+            } else {
+              form.textContent=form.textContent+tet[4]
+              port.textContent=port.textContent+"to"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==10){
+            if (form.textContent=="") {
+                form.textContent=yod[4]
+                port.textContent="yo"
+               
+            } else {
+              form.textContent=form.textContent+yod[4]
+              port.textContent=port.textContent+"yo"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==11){
+            if (form.textContent=="") {
+                form.textContent=kaf[4]
+                port.textContent="ko"
+               
+            } else {
+              form.textContent=form.textContent+kaf[4]
+              port.textContent=port.textContent+"ko"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==12){
+            if (form.textContent=="") {
+                form.textContent=kafm[4]
+                port.textContent="cho"
+               
+            } else {
+              form.textContent=form.textContent+kafm[4]
+              port.textContent=port.textContent+"cho"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==13){
+            if (form.textContent=="") {
+                form.textContent=lamed[4]
+                port.textContent="lo"
+               
+            } else {
+              form.textContent=form.textContent+lamed[4]
+              port.textContent=port.textContent+"lo"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==14){
+            if (form.textContent=="") {
+                form.textContent=mem[4]
+                port.textContent="mo"
+               
+            } else {
+              form.textContent=form.textContent+mem[4]
+              port.textContent=port.textContent+"mo"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==15){
+            if (form.textContent=="") {
+                form.textContent=num[4]
+                port.textContent="no"
+               
+            } else {
+              form.textContent=form.textContent+num[4]
+              port.textContent=port.textContent+"no"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==16){
+            if (form.textContent=="") {
+                form.textContent=samek[4]
+                port.textContent="so"
+               
+            } else {
+              form.textContent=form.textContent+samek[4]
+              port.textContent=port.textContent+"so"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==17){
+            if (form.textContent=="") {
+                form.textContent=ayin[4]
+                port.textContent="o"
+               
+            } else {
+              form.textContent=form.textContent+ayin[4]
+              port.textContent=port.textContent+"o"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==18){
+            if (form.textContent=="") {
+                form.textContent=fe[4]
+                port.textContent="fo"
+               
+            } else {
+              form.textContent=form.textContent+fe[4]
+              port.textContent=port.textContent+"fo"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==19){
+            if (form.textContent=="") {
+                form.textContent=pe[4]
+                port.textContent="po"
+               
+            } else {
+              form.textContent=form.textContent+pe[4]
+              port.textContent=port.textContent+"po"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==20){
+            if (form.textContent=="") {
+                form.textContent=tsadi[4]
+                port.textContent="tso"
+               
+            } else {
+              form.textContent=form.textContent+tsadi[4]
+              port.textContent=port.textContent+"tso"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==21){
+            if (form.textContent=="") {
+                form.textContent=qof[4]
+                port.textContent="qo"
+               
+            } else {
+              form.textContent=form.textContent+qof[4]
+              port.textContent=port.textContent+"qo"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==22){
+            if (form.textContent=="") {
+                form.textContent=resh[4]
+                port.textContent="ro"
+               
+            } else {
+              form.textContent=form.textContent+resh[4]
+              port.textContent=port.textContent+"ro"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==23){
+            if (form.textContent=="") {
+                form.textContent=shin[4]
+                port.textContent="sho"
+               
+            } else {
+              form.textContent=form.textContent+shin[4]
+              port.textContent=port.textContent+"sho"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==24){
+            if (form.textContent=="") {
+                form.textContent=sin[4]
+                port.textContent="so"
+               
+            } else {
+              form.textContent=form.textContent+sin[4]
+              port.textContent=port.textContent+"so"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==25){
+            if (form.textContent=="") {
+                form.textContent=tav[4]
+                port.textContent="to"
+               
+            } else {
+              form.textContent=form.textContent+tav[4]
+              port.textContent=port.textContent+"to"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==26){
+            if (form.textContent=="") {
+                form.textContent=betsem[4]
+                port.textContent="vo"
+               
+            } else {
+              form.textContent=form.textContent+betsem[4]
+              port.textContent=port.textContent+"vo"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+
+
+
+
+
+
+
+           posit=""   
+         })
+
+
+         v5.addEventListener("click",()=>{
+            if(com==1){
+              if (form.textContent=="") {
+                form.textContent=alef[5]
+                port.textContent="u"
+              
+                
+            } else {
+              form.textContent=form.textContent+alef[5]
+              port.textContent=port.textContent+"u" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==2){
+            if (form.textContent=="") {
+                form.textContent=bet[5]
+                port.textContent="bu"
+               
+            } else {
+              form.textContent=form.textContent+bet[5]
+              port.textContent=port.textContent+"bu"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==3){
+            if (form.textContent=="") {
+                form.textContent=guimel[5]
+                port.textContent="gu"
+               
+            } else {
+              form.textContent=form.textContent+guimel[5]
+              port.textContent=port.textContent+"gu"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==4){
+            if (form.textContent=="") {
+                form.textContent=dalet[5]
+                port.textContent="du"
+               
+            } else {
+              form.textContent=form.textContent+dalet[5]
+              port.textContent=port.textContent+"du"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==5){
+            if (form.textContent=="") {
+                form.textContent=he[5]
+                port.textContent="hu"
+               
+            } else {
+              form.textContent=form.textContent+he[5]
+              port.textContent=port.textContent+"hu"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==6){
+            if (form.textContent=="") {
+                form.textContent=vav[5]
+                port.textContent="vu"
+               
+            } else {
+              form.textContent=form.textContent+vav[5]
+              port.textContent=port.textContent+"vu"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==7){
+            if (form.textContent=="") {
+                form.textContent=zayin[5]
+                port.textContent="zu"
+               
+            } else {
+              form.textContent=form.textContent+zayin[5]
+              port.textContent=port.textContent+"zu"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==8){
+            if (form.textContent=="") {
+                form.textContent=Het[5]
+                port.textContent="chu"
+               
+            } else {
+              form.textContent=form.textContent+Het[5]
+              port.textContent=port.textContent+"chu"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==9){
+            if (form.textContent=="") {
+                form.textContent=tet[5]
+                port.textContent="tu"
+               
+            } else {
+              form.textContent=form.textContent+tet[5]
+              port.textContent=port.textContent+"tu"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==10){
+            if (form.textContent=="") {
+                form.textContent=yod[5]
+                port.textContent="yu"
+               
+            } else {
+              form.textContent=form.textContent+yod[5]
+              port.textContent=port.textContent+"yu"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==11){
+            if (form.textContent=="") {
+                form.textContent=kaf[5]
+                port.textContent="ku"
+               
+            } else {
+              form.textContent=form.textContent+kaf[5]
+              port.textContent=port.textContent+"ku"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==12){
+            if (form.textContent=="") {
+                form.textContent=kafm[5]
+                port.textContent="chu"
+               
+            } else {
+              form.textContent=form.textContent+kafm[5]
+              port.textContent=port.textContent+"chu"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==13){
+            if (form.textContent=="") {
+                form.textContent=lamed[5]
+                port.textContent="lu"
+               
+            } else {
+              form.textContent=form.textContent+lamed[5]
+              port.textContent=port.textContent+"lu"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==14){
+            if (form.textContent=="") {
+                form.textContent=mem[5]
+                port.textContent="mu"
+               
+            } else {
+              form.textContent=form.textContent+mem[5]
+              port.textContent=port.textContent+"mu"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==15){
+            if (form.textContent=="") {
+                form.textContent=num[5]
+                port.textContent="nu"
+               
+            } else {
+              form.textContent=form.textContent+num[5]
+              port.textContent=port.textContent+"nu"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==16){
+            if (form.textContent=="") {
+                form.textContent=samek[5]
+                port.textContent="su"
+               
+            } else {
+              form.textContent=form.textContent+samek[5]
+              port.textContent=port.textContent+"su"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==17){
+            if (form.textContent=="") {
+                form.textContent=ayin[5]
+                port.textContent="u"
+               
+            } else {
+              form.textContent=form.textContent+ayin[5]
+              port.textContent=port.textContent+"u"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==18){
+            if (form.textContent=="") {
+                form.textContent=fe[5]
+                port.textContent="fu"
+               
+            } else {
+              form.textContent=form.textContent+fe[5]
+              port.textContent=port.textContent+"fu"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==19){
+            if (form.textContent=="") {
+                form.textContent=pe[5]
+                port.textContent="pu"
+               
+            } else {
+              form.textContent=form.textContent+pe[5]
+              port.textContent=port.textContent+"pu"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==20){
+            if (form.textContent=="") {
+                form.textContent=tsadi[5]
+                port.textContent="tsu"
+               
+            } else {
+              form.textContent=form.textContent+tsadi[5]
+              port.textContent=port.textContent+"tsu"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==21){
+            if (form.textContent=="") {
+                form.textContent=qof[5]
+                port.textContent="qu"
+               
+            } else {
+              form.textContent=form.textContent+qof[5]
+              port.textContent=port.textContent+"qu"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==22){
+            if (form.textContent=="") {
+                form.textContent=resh[5]
+                port.textContent="ru"
+               
+            } else {
+              form.textContent=form.textContent+resh[5]
+              port.textContent=port.textContent+"ru"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==23){
+            if (form.textContent=="") {
+                form.textContent=shin[5]
+                port.textContent="shu"
+               
+            } else {
+              form.textContent=form.textContent+shin[5]
+              port.textContent=port.textContent+"shu"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==24){
+            if (form.textContent=="") {
+                form.textContent=sin[5]
+                port.textContent="su"
+               
+            } else {
+              form.textContent=form.textContent+sin[5]
+              port.textContent=port.textContent+"su"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==25){
+            if (form.textContent=="") {
+                form.textContent=tav[5]
+                port.textContent="tu"
+               
+            } else {
+              form.textContent=form.textContent+tav[5]
+              port.textContent=port.textContent+"tu"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+           if(com==26){
+            if (form.textContent=="") {
+                form.textContent=betsem[5]
+                port.textContent="vu"
+               
+            } else {
+              form.textContent=form.textContent+betsem[5]
+              port.textContent=port.textContent+"vu"
+
+            }
+            caixa.style.display="none"
+             tecla.style.display="block"
+             com=0
+           }
+
+
+
+
+           posit=""  
+         })
+         
+        v6.addEventListener("click",()=>{
+          if (com==2) {
+            if (form.textContent=="") {
+              form.textContent="בְּ"
+              port.textContent="Bë"
+           
+           caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+             posit=""
+
+            
+          } else {
+           if (posit=="Space") {
+            
+            caixa.style.display="none"
+             tecla.style.display="block" 
+             form.textContent=form.textContent+"בְּ"
+            port.textContent=port.textContent+"bë"
+             com=0
+             posit=""
+            
+           }else{
+            form.textContent=form.textContent+"בְּ"
+            port.textContent=port.textContent+"b"
+            caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+             posit=""
+           }
+            
+          }
+          }
+          if (com==3) {
+            if (form.textContent=="") {
+              form.textContent="גְ"
+              port.textContent="gë"
+           
+           caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+             posit=""
+
+            
+          } else {
+           if (posit=="Space") {
+            
+            caixa.style.display="none"
+             tecla.style.display="block" 
+             form.textContent=form.textContent+"גְ"
+            port.textContent=port.textContent+"gë"
+             com=0
+             posit=""
+            
+           }else{
+            form.textContent=form.textContent+"גְ"
+            port.textContent=port.textContent+"g"
+            caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+             posit=""
+           }
+            
+          }
+          }
+          if (com==4) {
+            if (form.textContent=="") {
+              form.textContent="דְ"
+              port.textContent="bë"
+           
+           caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+             posit=""
+
+            
+          } else {
+           if (posit=="Space") {
+            
+            caixa.style.display="none"
+             tecla.style.display="block" 
+             form.textContent=form.textContent+"דְ"
+            port.textContent=port.textContent+"bë"
+             com=0
+             posit=""
+            
+           }else{
+            form.textContent=form.textContent+"דְ"
+            port.textContent=port.textContent+"b"
+            caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+             posit=""
+           }
+            
+          }
+          }
+
+
+
+
+
+
+          if (com==26) {
+            if (form.textContent=="") {
+              form.textContent="בְ"
+              port.textContent="vë"
+           
+           caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+             posit=""
+
+            
+          } else {
+           if (posit=="Space") {
+            
+            caixa.style.display="none"
+             tecla.style.display="block" 
+             form.textContent=form.textContent+"בְ"
+            port.textContent=port.textContent+"vë"
+             com=0
+             posit=""
+            
+           }else{
+            form.textContent=form.textContent+"בְ"
+            port.textContent=port.textContent+"v"
+            caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+             posit=""
+           }
+            
+          }
+          }
+          if (com==27) {
+            if (form.textContent=="") {
+              form.textContent="גְּ"
+              port.textContent="gë"
+           
+           caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+             posit=""
+
+            
+          } else {
+           if (posit=="Space") {
+            
+            caixa.style.display="none"
+             tecla.style.display="block" 
+             form.textContent=form.textContent+"גְּ"
+            port.textContent=port.textContent+"gë"
+             com=0
+             posit=""
+            
+           }else{
+            form.textContent=form.textContent+"גְּ"
+            port.textContent=port.textContent+"g"
+            caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+             posit=""
+           }
+            
+          }
+          }
+          
+          
+          
+        })
+        
+        v7.addEventListener("click",() =>{
+          alert("fuciona ַ a")
+        })
+
+        v8.addEventListener("click",() =>{
+          alert("fuciona e curto")
+        })
+
+        v9.addEventListener("click",() =>{
+          alert("fuciona  a reduzida")
+        })
+
+
+
+
+         btn.addEventListener("click",()=>{
+            if(sofit==1){
+              form.textContent=form.textContent+"ך"
+              port.textContent=port.textContent+"ch"
+              btn.style.display="none"
+              sofit=0
+            }
+            if(sofit==2){
+              form.textContent=form.textContent+"ם"
+              port.textContent=port.textContent+"m"
+              btn.style.display="none"
+              sofit=0
+            }
+            if(sofit==3){
+              form.textContent=form.textContent+"ן"
+              port.textContent=port.textContent+"n"
+              btn.style.display="none"
+              sofit=0
+            }
+            if(sofit==4){
+              form.textContent=form.textContent+"ף"
+              port.textContent=port.textContent+"f"
+              btn.style.display="none"
+              sofit=0
+            }
+            if(sofit==5){
+              form.textContent=form.textContent+"ף"
+              port.textContent=port.textContent+"ts"
+              btn.style.display="none"
+              sofit=0
+            }
+
+
+         })
+
+        
+
+
+    </script>
+</body>
+</html>
