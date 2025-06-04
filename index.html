@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hebraico</title>
     <style>
+      body{
+        background-color: gold;
+      }
         .tecla{
             background-color: aqua;
             width: fit-content;
@@ -35,6 +38,7 @@
             
         }
         .btn{
+       
             display: none;
             margin-left: 40%;
             background-color: darkgreen;
@@ -42,6 +46,9 @@
             font-size: 25px;
             margin-top: 15px;
             padding: 10px;
+            border-radius: 15px;
+
+
                 }
                 .caixa{
                     position: absolute;
@@ -65,13 +72,25 @@
                 marquee{
                   font-size: 18px;
                   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                
                 }
+              .usa{
+                
+                display: none;
+                margin-left: 40%;
+                 background-color: darkgreen;
+                 color: aliceblue;
+                font-size: 25px;
+                margin-top: 15px;
+                padding: 10px;
+                border-radius: 15px;
+              }
                 
     </style>
 </head>
 <body>
    <marquee behavior="" direction="">Comunidade B´ney Isra´el</marquee>
-    <h1 align="center">Letra do Hebraico</h1><br>
+    <h1 align="center">Alfabeto  Hebraico</h1><br>
     <h2 class="display" align="center"></h2>
     
     <h3 class="trad" align="center"></h3>
@@ -83,7 +102,7 @@
                 <a class="t1">א</a><a class="t2">בּ</a><a class="t42">ב</a><a class="t3">ג</a><a class="t45">גּ</a><a class="t4">ד</a><a class="t5">ה</a><a class="t6">ו</a><br><br>
                 <a class="t7">ז</a><a class="t8">ח</a><a class="t9">ט</a><a class="t10">י</a><a class="t11">כּ</a><a class="t12">כ</a><a class="t13">ך</a><a class="t14">ל</a><br><br>
                 <a class="t15">מ</a><a class="t16">ם</a><a class="t17">נ</a><a class="t18">ן</a><a class="t19">ס</a><a class="t20">ע</a><a class="t21">פ</a><a class="t22">פּ</a><br><br>
-                <a class="t23">ף</a><a class="t24">צ</a><a class="t25">ץ</a><a class="t26">ק</a><a class="t27">ר</a><a class="t28">שׁ</a><a class="t29">שׂ</a><a class="t46">&#xFB49;</a><br><br>
+                <a class="t23">ף</a><a class="t24">צ</a><a class="t25">ץ</a><a class="t26">ק</a><a class="t27">ר</a><a class="t28">שׁ</a><a class="t29">שׂ</a><br><br>
                 <a class="t30">ת</a><a class="t31">ָ</a><a class="t32">ַ</a><a class="t34">ֵ</a><a class="t35">ֶ</a><a class="t36">ֱ</a><a class="t37">ִ</a><a class="t38">ֹ</a><br><br>    
                 <a class="t41">וּ</a></a><a class="t40">ֻ</a><a class="t39">ֳ</a><a class="t47">וֹ</a><a class="t43">&#x5B2;</a><a class="t44">&#1456;</a><br><br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br><a href="">Limpar campo</a>&nbsp;&nbsp;<a class="espaso">Espaço</a>
@@ -107,10 +126,16 @@
     
     
     <button class="btn">usar o sofit</button>
+    <button class="usa">Usar</button>
 
     <br><br>
 
     <script>
+      /*alert("Shalom bem vindo ao app alfaberto hebraico, para usar click nas letras para conhecelas e formar palavras")*/
+
+        
+
+        var usa = document.querySelector(".usa")
         var btn= document.querySelector(".btn")
         var visou= document.querySelector(".display")
         var h3 = document.querySelector(".trad")
@@ -450,6 +475,7 @@
           form.textContent=form.textContent+" "
           posit="Space"
         })
+        var usarvogal=""
       
        
 
@@ -457,7 +483,15 @@
         t1.addEventListener("click",()=>{
             visou.textContent="א"+",  "+"Alef" 
                 h3.textContent="'"
-                
+                if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra álefe, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none" 
               usar=1  
              com=1
              caixa.style.display="block"
@@ -469,6 +503,15 @@
         t2.addEventListener("click",()=>{
             visou.textContent="בּ"+" , "+"Bet com daguesh"
                 h3.textContent="b"
+                if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra bet com daguesh que é a letra B, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
                 usar=2
                 com=2
                 caixa.style.display="block"
@@ -480,6 +523,15 @@
         t3.addEventListener("click",()=>{
              visou.textContent="ג"+" , "+"Guímel"
              h3.textContent="g"
+             if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra guímel sem daguesh que é a letra g, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
              usar=3
              com=3
              caixa.style.display="block"
@@ -490,6 +542,15 @@
         t4.addEventListener("click",()=>{
              visou.textContent="ד"+" , "+"Dalet"
              h3.textContent="d"
+             if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra dalet que é a letra d, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
              usar=4
             com=4
             caixa.style.display="block"
@@ -500,6 +561,15 @@
         t5.addEventListener("click",()=>{
              visou.textContent="ה"+" , "+"He"
              h3.textContent="h"
+             if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra he que é a letra h, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
              usar=5
             com=5
             caixa.style.display="block"
@@ -510,6 +580,15 @@
         t6.addEventListener("click",()=>{
              visou.textContent="ו"+" ,vav  com  som de v "
              h3.textContent="v"
+             if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra vav que é a letra v, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
              usar=6
             com=6
             caixa.style.display="block"
@@ -520,6 +599,15 @@
         t7.addEventListener("click",()=>{
              visou.textContent="ז"+" , "+"Zayin"
              h3.textContent="z"
+             if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra zayin que é a letra z, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
              usar=7
            com=7
             caixa.style.display="block"
@@ -532,6 +620,15 @@
         t8.addEventListener("click",()=>{
              visou.textContent="ח"+" , "+"Het"
              h3.textContent="ch som rr"
+             if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra het que é a letra ch, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
              usar=8
             com=8
             caixa.style.display="block"
@@ -543,6 +640,15 @@
         t9.addEventListener("click",()=>{
             visou.textContent="ט"+" , "+"Tet"
             h3.textContent="t"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra tet, que é a letra t, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
             usar=9
             com=9
             caixa.style.display="block"
@@ -554,6 +660,15 @@
         t10.addEventListener("click",()=>{
             visou.textContent="י"+" , "+"Yod"
             h3.textContent="y"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra yud que é a letra y, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
             usar=10
             com=10
             caixa.style.display="block"
@@ -562,8 +677,17 @@
 
         })
         t11.addEventListener("click",()=>{
-            visou.textContent="כּ"+" , "+"kaf"
+            visou.textContent="כּ"+" , "+"kaf com daguesh"
             h3.textContent="k"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra kaf com daguesh que é a letra k, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
             usar=11
             com=11
             caixa.style.display="block"
@@ -573,8 +697,17 @@
         })
         t12.addEventListener("click",()=>{
         
-            visou.textContent="כ"+" , "+"kaf"
+            visou.textContent="כ"+" , "+"kaf sem daguesh"
            h3.textContent="ch no meio de palavras"
+           if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra kaf sem daguesh que é a letra ch, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
            usar=12
            com=12
             caixa.style.display="block"
@@ -587,14 +720,31 @@
             
             visou.textContent="ך"+" , "+"Kaf sofit"
             h3.textContent="ch no final de frase"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("a letra kaf sofit e só usada no final de uma palavra que é a letra ch. a baixo apareceu um butão pra usar a letra kaf sofit, caso não queira usar é só clicar em otra letra.  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
             btn.style.display="block"
             sofit=1
-
+            usa.style.display="none"
 
         })
         t14.addEventListener("click",()=>{
             visou.textContent="ל"+" , "+"Lamed"
             h3.textContent="L"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra lamed que é a letra L, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
             usar=13
            com=13
             caixa.style.display="block"
@@ -606,6 +756,15 @@
         t15.addEventListener("click",()=>{
             visou.textContent="מ"+" , "+"Mem"
             h3.textContent="m"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra Men que é a letra M, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
             usar=14
             com=14
             caixa.style.display="block"
@@ -617,7 +776,15 @@
         t16.addEventListener("click",()=>{
             visou.textContent="ם"+" , "+"mem sofit"
             h3.textContent="m no final de palavras"
-           
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("a letra Men sofit e usada no final de uma palavra, a baixo apareceu um botão, usar sofit? caso não queira usar é só clicar em outra letra." );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
             
              btn.style.display="block"
              sofit=2
@@ -627,6 +794,15 @@
          t17.addEventListener("click",()=>{
             visou.textContent="נ"+" , "+"Nun"
             h3.textContent="n"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra Nun que é a letra N, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
             usar=15
             com=15
             caixa.style.display="block"
@@ -638,7 +814,15 @@
          t18.addEventListener("click",()=>{
             visou.textContent="ן"+" , "+"nun sofit"
             h3.textContent="n no final das palavras"
-          
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("a letra Nun sofit é usada no final de uma palavra, a baixo apareceu um botão, usar sofit? caso não queira usar clique em outra letra" );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
             
              btn.style.display="block"
              sofit=3
@@ -648,6 +832,15 @@
          t19.addEventListener("click",()=>{
             visou.textContent="ס"+" , "+"Samek"
             h3.textContent="s"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra samek que é a letra S, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
             usar=16
             com=16
             caixa.style.display="block"
@@ -659,6 +852,15 @@
          t20.addEventListener("click",()=>{
             visou.textContent="ע"+" , "+"Ayin"
             h3.textContent=" sem som"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra ayin que é a letra  sem som, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
             usar=17
             com=17
             caixa.style.display="block"
@@ -670,6 +872,15 @@
          t21.addEventListener("click",()=>{
             visou.textContent="פ"+" , "+"fe"
             h3.textContent="f"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra fe que é a letra F, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
             usar=18
             com=18
             caixa.style.display="block"
@@ -679,8 +890,17 @@
 
          })
          t22.addEventListener("click",()=>{
-            visou.textContent="פּ"+" , "+"Pe"
+            visou.textContent="פּ"+" , "+"fe com daguesh"
             h3.textContent="p"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra fe com daguesh que é a letra P, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
             usar=19
             com=19
             caixa.style.display="block"
@@ -692,7 +912,15 @@
          t23.addEventListener("click",()=>{
             visou.textContent="ף"+" , "+"pe sofit"
             h3.textContent=" f no final de frase"
-            
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("a letra fe sofit é usada no final de uma palavra, que é a letra P, a baixo apareceu um botão se deseja usar sofit, caso não queira usar clique em outra letra." );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
             btn.style.display="block"
             sofit=4
 
@@ -701,6 +929,15 @@
          t24.addEventListener("click",()=>{
             visou.textContent="צ"+" , "+"Tsadi"
             h3.textContent="ts"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra Tsadi que é a letra TS, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
             usar=20
            com=20
             caixa.style.display="block"
@@ -712,7 +949,15 @@
          t25.addEventListener("click",()=>{
             visou.textContent="ץ"+" , "+"tsadi sofit"
             h3.textContent="ts no final de frase"
-           
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("a letra tsadi sofit só é usada no final de uma palavra,a baixo apareseu um botão caso queira usar sofit, caso não queira usar é só clicar em outra letra" );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
             btn.style.display="block"
             sofit=5
 
@@ -721,6 +966,15 @@
          t26.addEventListener("click",()=>{
             visou.textContent="ק"+" , "+"Qof"
             h3.textContent="Q"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra cof que é a letra Q, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
             usar=21
            com=21
             caixa.style.display="block"
@@ -732,6 +986,15 @@
          t27.addEventListener("click",()=>{
             visou.textContent="ר"+" , "+"Resh"
             h3.textContent="R"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra Resh que é a letra R, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
             usar=22
             com=22
             caixa.style.display="block"
@@ -743,6 +1006,15 @@
          t28.addEventListener("click",()=>{
             visou.textContent="שׁ"+" , "+"Shin"
             h3.textContent="sh"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra shin que é a letra SH, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
             usar=23
             com=23
             caixa.style.display="block"
@@ -754,6 +1026,15 @@
          t29.addEventListener("click",()=>{
             visou.textContent="שׂ"+" , "+"sin"
             h3.textContent="s"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra sin que é a letra S, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
             usar=24
             com=24
             caixa.style.display="block"
@@ -765,6 +1046,15 @@
          t30.addEventListener("click",()=>{
             visou.textContent="ת"+" , "+"Tav"
             h3.textContent="T"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra Tave que é a letra T, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
             usar=25
            com=25
             caixa.style.display="block"
@@ -775,51 +1065,157 @@
          })
          t31.addEventListener("click",()=>{
             visou.textContent="ָ"
-            h3.textContent="a, chataf  "
+            h3.textContent="a, qamets vogal longa "
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("vogal qamets que é a vogal a, longa" );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
             
         
 
          })
          t32.addEventListener("click",()=>{
             visou.textContent="ַ"
-            h3.textContent="a, Kamatz vogual curta"
+            h3.textContent="a, patach vogual curta"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("vogal patach que é a vogal a curta" );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
             
          })
          t34.addEventListener("click",()=>{
             visou.textContent="ֵ"
-            h3.textContent="ê, tsere"
+            h3.textContent="ê, tsere vogal longa"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("vogal tsere que é a vogal ê, longa" );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
          })
          t35.addEventListener("click",()=>{
             visou.textContent="ֶ"
-            h3.textContent="e,  segol"
+            h3.textContent="é,  segol vogal curta"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("vogal segol que é a vogal é, curta" );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
+
          })
          t36.addEventListener("click",()=>{
             visou.textContent="ֱ"
-            h3.textContent="E, reduzido chatef-sego"
+            h3.textContent="é,  chatef-segol vogal reduzida"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("vogal rataf-segol, que é a vogal é reduzida" );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
+   
          })
          t37.addEventListener("click",()=>{
             visou.textContent="ִ"
-            h3.textContent="i, chiriq"
+            h3.textContent="i, chiriq vogal curta"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("vogal ririq, que é a vogal I, curta" );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
          })
          t38.addEventListener("click",()=>{
             visou.textContent="ֹ"
-            h3.textContent="ô, cholam"
+            h3.textContent="ô, cholam vogal longa"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("vogal rolam, que é a vogal, ô, longa" );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+
          })
          t39.addEventListener("click",()=>{
             visou.textContent="ֳ"
             h3.textContent="ó, reduzido chatef-qamets"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("vogal rataf-qamets, que é a vogal, ó, redizido" );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
+
          })
          t40.addEventListener("click",()=>{
             visou.textContent="ֻ"
-            h3.textContent="u, qibbuts"
+            h3.textContent="u, qibbuts vogal curta"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("vogal qibbuts que é a vogal, u, curta" );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
          })
          t41.addEventListener("click",()=>{
             visou.textContent="וּ"
-            h3.textContent="u, shurek "
+            h3.textContent="u, shurek vogal longa "
+            usa.style.display="block"
+            usarvogal="shuruk"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("vogal shuruk que é a vogal, u longa,  que pode ser usada sem uma letra, a baixo apareceu um botão caso queira usar, caso não queira usar clique em outra letra. " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          
+          btn.style.display="none"
+
          })
          t42.addEventListener("click",()=>{
             visou.textContent="ב, Bet sem o daguesh"
             h3.textContent="v"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra bet sem daguesh que é a letra v, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
             usar=26
             com=26
             caixa.style.display="block"
@@ -827,19 +1223,49 @@
              btn.style.display="none"
          })
          t43.addEventListener("click",()=>{
-            visou.textContent="ֲ          a chataf Patah"
+            visou.textContent="ֲ          a chataf Patah vogal reuzida"
             h3.textContent="ֲ  "
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("a vogal rataf patah é uma vogal, A, reduzida" );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+
+            usa.style.display="none"
             
            
          })
          t44.addEventListener("click",()=>{
-            visou.textContent="Sheva no inicio de palavra é E, no meio e sem som divisou de silabas"
+            visou.textContent="Sheva no inicio de palavra é, ou depois de uma vogal curta, se for uma vogal longa ele não usa nada"
             h3.textContent="ְ"
+            if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("vogal sheva ela em inicio de uma palavra é a letra, é, ou se for depois de uma vogal curta ele e a letra, é, se for depois de uma vogal longa ele não usa nada." );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+
+
+            usa.style.display="none"
             
          })
          t45.addEventListener("click",()=>{
              visou.textContent="גּ"+" , "+"Guímel com daguesh"
              h3.textContent="g"
+             if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("selecione a vogal que deseja usar com a letra guímel com daguesh que é a letra g, ou click sem vogais para usar so a letra, ou click em sair para ver outra  " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          usa.style.display="none"
              usar=28
              com=27
              caixa.style.display="block"
@@ -847,19 +1273,23 @@
              btn.style.display="none"
              
         })
-        t46.addEventListener("click",()=>{
-            visou.textContent="שּ"+  "  , Shin com daguesh"
-            h3.textContent="sh"
-           
-
-
-         })
+        
          t47.addEventListener("click",()=>{
           visou.textContent="וֹ , vav com cholam"
           h3.textContent="ô"
-          usar= 27
-          caixa.style.display="block"
-             tecla.style.display="none"
+          usarvogal="vavcholam"
+          usa.style.display="block"
+          if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("vogal vav com rolam, que é a vogal, ô,que usa sem letra no caso usa ela só, abaixo apareceu um botão caso queira usar, coso não queira usar clique em outra letra. " );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
+          
+          caixa.style.display="none"
+             tecla.style.display="block"
              btn.style.display="none"
          })
 
@@ -3215,9 +3645,27 @@
 
          })
 
+         usa.addEventListener("click", () =>{
+           if (usarvogal=="shuruk") {
+            form.textContent=form.textContent+"וּ"
+            port.textContent=port.textContent+"u"
+
+           }
+           if (usarvogal=="vavcholam") {
+            form.textContent=form.textContent+"וֹ"
+            port.textContent=port.textContent+"ô"
+            
+           }
+
+
+           usarvogal=""
+          usa.style.display="none"
+
+         })
+
         
 
-
+     
     </script>
 </body>
 </html>
