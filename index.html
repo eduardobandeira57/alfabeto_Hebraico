@@ -104,16 +104,16 @@
                 <a class="t15">מ</a><a class="t16">ם</a><a class="t17">נ</a><a class="t18">ן</a><a class="t19">ס</a><a class="t20">ע</a><a class="t21">פ</a><a class="t22">פּ</a><br><br>
                 <a class="t23">ף</a><a class="t24">צ</a><a class="t25">ץ</a><a class="t26">ק</a><a class="t27">ר</a><a class="t28">שׁ</a><a class="t29">שׂ</a><br><br>
                 <a class="t30">ת</a><a class="t31">ָ</a><a class="t32">ַ</a><a class="t34">ֵ</a><a class="t35">ֶ</a><a class="t36">ֱ</a><a class="t37">ִ</a><a class="t38">ֹ</a><br><br>    
-                <a class="t41">וּ</a></a><a class="t40">ֻ</a><a class="t39">ֳ</a><a class="t47">וֹ</a><a class="t43">&#x5B2;</a><a class="t44">&#1456;</a><br><br>
+                <a class="t41">וּ</a></a><a class="t40">ֻ</a><a class="t39">ֳ</a><a class="t47">וֹ</a><a class="t43">&#x5B2;</a><a class="t44">&#1456;</a><a class="t48">ִי</a><br><br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br><a href="">Limpar campo</a>&nbsp;&nbsp;<a class="espaso">Espaço</a>
             </td>
         </tr>
     </table><br>
     <audio src="/alfbt/sin.mp3"></audio>
     <div class="caixa" align="center">
-        <a class="v1">ָ  ã</a><a class="v7">ַ a</a><a class="v9"> ֲa</a><br><br>
-        <a class="v2">ֵ e</a><a class="v8">ֶe</a><a class="v6">ְ ë</a><br><br>
-        <a class="v3">ִ i</a><br><br>
+        <a class="v1">ָ  á</a><a class="v7">ַ a</a><a class="v9"> ֲa</a><br><br>
+        <a class="v2">ֵ e</a><a class="v8">ֶe</a><a class="v6">ְ ë</a><a class="v12">ֱ e</a><br><br>
+        <a class="v3">ִ i</a><a class="v10">ִי</a><br><br>
         <a class="v4">ֹ  o</a><br><br>
         <a class="v5">ֻ u</a>
         <br><br><br>
@@ -191,6 +191,7 @@
         var t45 = document.querySelector(".t45")
         var t46 = document.querySelector(".t46")
         var t47 = document.querySelector(".t47")
+        var t48 = document.querySelector(".t48")
         let com =0
         var sofit=0
         var port= document.querySelector(".port")
@@ -208,7 +209,11 @@
         var v8 = document.querySelector(".v8")
         var v9 = document.querySelector(".v9")
         var v10 = document.querySelector(".v10")
-        var v11 = document.querySelector(".v11")
+        
+        var v12 = document.querySelector(".v12")
+        var v13 = document.querySelector(".v13")
+        var v14 = document.querySelector(".v14")
+        var v15 = document.querySelector(".v15")
         
 
 
@@ -1273,7 +1278,6 @@
              btn.style.display="none"
              
         })
-        
          t47.addEventListener("click",()=>{
           visou.textContent="וֹ , vav com cholam"
           h3.textContent="ô"
@@ -1292,7 +1296,20 @@
              tecla.style.display="block"
              btn.style.display="none"
          })
+         t48.addEventListener("click",() =>{
+          visou.textContent="ִי"
+          h3.textContent="i hiriq-yod vogal longa"
+          if ('speechSynthesis' in window) {
+              const utterance = new SpeechSynthesisUtterance("vogal, hiriq-yud, que é a vogal, i, longa" );
+               utterance.lang = 'pt-BR';
+  
+            speechSynthesis.speak(utterance);
+          } else {
+             alert('Desculpe, seu navegador não suporta a API Web Speech.');
+          }
 
+
+         })
 
          /*------usar só as consoantes---*/
 
@@ -1536,16 +1553,17 @@
          /*****forma silabas com vogais*****/
          
         var vogalcurt=""
-         
+        
+        /**********qamets vogal A longa******************/
          v1.addEventListener("click",()=>{
             if(com==1){
             if (form.textContent=="") {
                 form.textContent=alef[1]
-                port.textContent="ã"
+                port.textContent="á"
                
             } else {
               form.textContent=form.textContent+alef[1]
-              port.textContent=port.textContent+"ã"
+              port.textContent=port.textContent+"á"
 
             }
             caixa.style.display="none"
@@ -1559,7 +1577,7 @@
                
             } else {
               form.textContent=form.textContent+bet[1]
-              port.textContent=port.textContent+"bã"
+              port.textContent=port.textContent+"bá"
 
             }
             caixa.style.display="none"
@@ -1569,11 +1587,11 @@
            if(com==3){
             if (form.textContent=="") {
                 form.textContent=guimel[1]
-                port.textContent="gã"
+                port.textContent="gá"
                
             } else {
               form.textContent=form.textContent+guimel[1]
-              port.textContent=port.textContent+"gã"
+              port.textContent=port.textContent+"gá"
 
             }
             caixa.style.display="none"
@@ -1583,11 +1601,11 @@
            if(com==4){
             if (form.textContent=="") {
                 form.textContent=dalet[1]
-                port.textContent="dã"
+                port.textContent="dá"
                
             } else {
               form.textContent=form.textContent+dalet[1]
-              port.textContent=port.textContent+"dã"
+              port.textContent=port.textContent+"dá"
 
             }
             caixa.style.display="none"
@@ -1597,11 +1615,11 @@
            if(com==5){
             if (form.textContent=="") {
                 form.textContent=he[1]
-                port.textContent="hã"
+                port.textContent="há"
                
             } else {
               form.textContent=form.textContent+he[1]
-              port.textContent=port.textContent+"hã"
+              port.textContent=port.textContent+"há"
 
             }
             caixa.style.display="none"
@@ -1611,11 +1629,11 @@
            if(com==6){
             if (form.textContent=="") {
                 form.textContent=vav[1]
-                port.textContent="wã"
+                port.textContent="wá"
                
             } else {
               form.textContent=form.textContent+vav[1]
-              port.textContent=port.textContent+"wã"
+              port.textContent=port.textContent+"wá"
 
             }
             caixa.style.display="none"
@@ -1625,11 +1643,11 @@
            if(com==7){
             if (form.textContent=="") {
                 form.textContent=zayin[1]
-                port.textContent="zã"
+                port.textContent="zá"
                
             } else {
               form.textContent=form.textContent+zayin[1]
-              port.textContent=port.textContent+"zã"
+              port.textContent=port.textContent+"zá"
 
             }
             caixa.style.display="none"
@@ -1639,11 +1657,11 @@
            if(com==8){
             if (form.textContent=="") {
                 form.textContent=Het[1]
-                port.textContent="chã"
+                port.textContent="chá"
                
             } else {
               form.textContent=form.textContent+Het[1]
-              port.textContent=port.textContent+"chã"
+              port.textContent=port.textContent+"chá"
 
             }
             caixa.style.display="none"
@@ -1653,11 +1671,11 @@
            if(com==9){
             if (form.textContent=="") {
                 form.textContent=tet[1]
-                port.textContent="tã"
+                port.textContent="tá"
                
             } else {
               form.textContent=form.textContent+tet[1]
-              port.textContent=port.textContent+"tã"
+              port.textContent=port.textContent+"tá"
 
             }
             caixa.style.display="none"
@@ -1667,11 +1685,11 @@
            if(com==10){
             if (form.textContent=="") {
                 form.textContent=yod[1]
-                port.textContent="yã"
+                port.textContent="yá"
                
             } else {
               form.textContent=form.textContent+yod[1]
-              port.textContent=port.textContent+"yã"
+              port.textContent=port.textContent+"yá"
 
             }
             caixa.style.display="none"
@@ -1681,11 +1699,11 @@
            if(com==11){
             if (form.textContent=="") {
                 form.textContent=kaf[1]
-                port.textContent="kã"
+                port.textContent="ká"
                
             } else {
               form.textContent=form.textContent+kaf[1]
-              port.textContent=port.textContent+"kã"
+              port.textContent=port.textContent+"ká"
 
             }
             caixa.style.display="none"
@@ -1695,11 +1713,11 @@
            if(com==12){
             if (form.textContent=="") {
                 form.textContent=kafm[1]
-                port.textContent="chã"
+                port.textContent="chá"
                
             } else {
               form.textContent=form.textContent+kafm[1]
-              port.textContent=port.textContent+"chã"
+              port.textContent=port.textContent+"chá"
 
             }
             caixa.style.display="none"
@@ -1709,11 +1727,11 @@
            if(com==13){
             if (form.textContent=="") {
                 form.textContent=lamed[1]
-                port.textContent="lã"
+                port.textContent="lá"
                
             } else {
               form.textContent=form.textContent+lamed[1]
-              port.textContent=port.textContent+"lã"
+              port.textContent=port.textContent+"lá"
 
             }
             caixa.style.display="none"
@@ -1723,11 +1741,11 @@
            if(com==14){
             if (form.textContent=="") {
                 form.textContent=mem[1]
-                port.textContent="mã"
+                port.textContent="má"
                
             } else {
               form.textContent=form.textContent+mem[1]
-              port.textContent=port.textContent+"mã"
+              port.textContent=port.textContent+"má"
 
             }
             caixa.style.display="none"
@@ -1737,11 +1755,11 @@
            if(com==15){
             if (form.textContent=="") {
                 form.textContent=num[1]
-                port.textContent="nã"
+                port.textContent="ná"
                
             } else {
               form.textContent=form.textContent+num[1]
-              port.textContent=port.textContent+"nã"
+              port.textContent=port.textContent+"ná"
 
             }
             caixa.style.display="none"
@@ -1751,11 +1769,11 @@
            if(com==16){
             if (form.textContent=="") {
                 form.textContent=samek[1]
-                port.textContent="sã"
+                port.textContent="sá"
                
             } else {
               form.textContent=form.textContent+samek[1]
-              port.textContent=port.textContent+"sã"
+              port.textContent=port.textContent+"sá"
 
             }
             caixa.style.display="none"
@@ -1765,11 +1783,11 @@
            if(com==17){
             if (form.textContent=="") {
                 form.textContent=ayin[1]
-                port.textContent="ã"
+                port.textContent="á"
                
             } else {
               form.textContent=form.textContent+ayin[1]
-              port.textContent=port.textContent+"ã"
+              port.textContent=port.textContent+"á"
 
             }
             caixa.style.display="none"
@@ -1779,11 +1797,11 @@
            if(com==18){
             if (form.textContent=="") {
                 form.textContent=fe[1]
-                port.textContent="fã"
+                port.textContent="fá"
                
             } else {
               form.textContent=form.textContent+fe[1]
-              port.textContent=port.textContent+"fã"
+              port.textContent=port.textContent+"fá"
 
             }
             caixa.style.display="none"
@@ -1793,11 +1811,11 @@
            if(com==19){
             if (form.textContent=="") {
                 form.textContent=pe[1]
-                port.textContent="pã"
+                port.textContent="pá"
                
             } else {
               form.textContent=form.textContent+pe[1]
-              port.textContent=port.textContent+"pã"
+              port.textContent=port.textContent+"pá"
 
             }
             caixa.style.display="none"
@@ -1807,11 +1825,11 @@
            if(com==20){
             if (form.textContent=="") {
                 form.textContent=tsadi[1]
-                port.textContent="tsã"
+                port.textContent="tsá"
                
             } else {
               form.textContent=form.textContent+tsadi[1]
-              port.textContent=port.textContent+"tsã"
+              port.textContent=port.textContent+"tsá"
 
             }
             caixa.style.display="none"
@@ -1821,11 +1839,11 @@
            if(com==21){
             if (form.textContent=="") {
                 form.textContent=qof[1]
-                port.textContent="qã"
+                port.textContent="qá"
                
             } else {
               form.textContent=form.textContent+qof[1]
-              port.textContent=port.textContent+"qã"
+              port.textContent=port.textContent+"qá"
 
             }
             caixa.style.display="none"
@@ -1835,11 +1853,11 @@
            if(com==22){
             if (form.textContent=="") {
                 form.textContent=resh[1]
-                port.textContent="rã"
+                port.textContent="rá"
                
             } else {
               form.textContent=form.textContent+resh[1]
-              port.textContent=port.textContent+"rã"
+              port.textContent=port.textContent+"rá"
 
             }
             caixa.style.display="none"
@@ -1849,11 +1867,11 @@
            if(com==23){
             if (form.textContent=="") {
                 form.textContent=shin[1]
-                port.textContent="shã"
+                port.textContent="shá"
                
             } else {
               form.textContent=form.textContent+shin[1]
-              port.textContent=port.textContent+"shã"
+              port.textContent=port.textContent+"shá"
 
             }
             caixa.style.display="none"
@@ -1863,11 +1881,11 @@
            if(com==24){
             if (form.textContent=="") {
                 form.textContent=sin[1]
-                port.textContent="sã"
+                port.textContent="sá"
                
             } else {
               form.textContent=form.textContent+sin[1]
-              port.textContent=port.textContent+"sã"
+              port.textContent=port.textContent+"sá"
 
             }
             caixa.style.display="none"
@@ -1877,11 +1895,11 @@
            if(com==25){
             if (form.textContent=="") {
                 form.textContent=tav[1]
-                port.textContent="tã"
+                port.textContent="tá"
                
             } else {
               form.textContent=form.textContent+tav[1]
-              port.textContent=port.textContent+"tã"
+              port.textContent=port.textContent+"tá"
 
             }
             caixa.style.display="none"
@@ -1891,11 +1909,11 @@
            if(com==26){
             if (form.textContent=="") {
                 form.textContent=betsem[1]
-                port.textContent="vã"
+                port.textContent="vá"
                
             } else {
               form.textContent=form.textContent+betsem[1]
-              port.textContent=port.textContent+"vã"
+              port.textContent=port.textContent+"vá"
 
             }
 
@@ -1903,11 +1921,11 @@
             if (com==27) {
               if (form.textContent=="") {
                 form.textContent=guimeldag[1]
-                port.textContent="gã"
+                port.textContent="gá"
                 
               } else {
                 form.textContent=form.textContent+guimeldag[1]
-                port.textContent=port.textContent+"gã"
+                port.textContent=port.textContent+"gá"
                 
               }
               caixa.style.display="none"
@@ -1925,6 +1943,7 @@
          })
 
 
+        /** tsere vogal ê longa************/
          v2.addEventListener("click",()=>{
             if(com==1){
               if (form.textContent=="") {
@@ -2301,6 +2320,8 @@
            posit="" 
          })
 
+        
+        /************chiriq vogal i curta********************/
          v3.addEventListener("click",()=>{
             if(com==1){
               if (form.textContent=="") {
@@ -2672,7 +2693,8 @@
             
            posit="" 
          })
-
+    
+         /***********cholam vogal ô longa***********************/
          v4.addEventListener("click",()=>{
             if(com==1){
               if (form.textContent=="") {
@@ -3049,7 +3071,7 @@
            posit=""   
          })
 
-
+        /************qibbuts vogal u curta*************************/
          v5.addEventListener("click",()=>{
             if(com==1){
               if (form.textContent=="") {
@@ -3423,7 +3445,11 @@
            posit=""  
          })
          
+        /************* sheva **********************/
         v6.addEventListener("click",()=>{
+          if (com==1) {
+            alert("À letra Alef não usa a vogal sheva")
+          }
           if (com==2) {
             if (form.textContent=="") {
               form.textContent="בְּ"
@@ -3595,16 +3621,1330 @@
           
         })
         
+        /**********patach vogual a curta**************************/
         v7.addEventListener("click",() =>{
-          alert("fuciona ַ a")
+          
+          if(com==1){
+              if (form.textContent=="") {
+                form.textContent="אַ"
+                port.textContent="a"
+              
+                
+            } else {
+              form.textContent=form.textContent+"אַ"
+              port.textContent=port.textContent+"a"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==2){
+              if (form.textContent=="") {
+                form.textContent="בַּ"
+                port.textContent="ba"
+              
+                
+            } else {
+              form.textContent=form.textContent+"בַּ"
+              port.textContent=port.textContent+"ba"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==3){
+              if (form.textContent=="") {
+                form.textContent="גַ"
+                port.textContent="ga"
+              
+                
+            } else {
+              form.textContent=form.textContent+"גַ"
+              port.textContent=port.textContent+"ga"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==4){
+              if (form.textContent=="") {
+                form.textContent="דַ"
+                port.textContent="da"
+              
+                
+            } else {
+              form.textContent=form.textContent+"דַ"
+              port.textContent=port.textContent+"da"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==5){
+              if (form.textContent=="") {
+                form.textContent="הַ"
+                port.textContent="ha"
+              
+                
+            } else {
+              form.textContent=form.textContent+"הַ"
+              port.textContent=port.textContent+"ha"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==6){
+              if (form.textContent=="") {
+                form.textContent="וַ"
+                port.textContent="va"
+              
+                
+            } else {
+              form.textContent=form.textContent+"וַ"
+              port.textContent=port.textContent+"va"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==7){
+              if (form.textContent=="") {
+                form.textContent="זַ"
+                port.textContent="za"
+              
+                
+            } else {
+              form.textContent=form.textContent+"זַ"
+              port.textContent=port.textContent+"za"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==8){
+              if (form.textContent=="") {
+                form.textContent="חַ"
+                port.textContent="cha"
+              
+                
+            } else {
+              form.textContent=form.textContent+"חַ"
+              port.textContent=port.textContent+"cha"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==9){
+              if (form.textContent=="") {
+                form.textContent="טַ"
+                port.textContent="ta"
+              
+                
+            } else {
+              form.textContent=form.textContent+"טַ"
+              port.textContent=port.textContent+"ta"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==10){
+              if (form.textContent=="") {
+                form.textContent="יַ"
+                port.textContent="ya"
+              
+                
+            } else {
+              form.textContent=form.textContent+"יַ"
+              port.textContent=port.textContent+"ya"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==11){
+              if (form.textContent=="") {
+                form.textContent="כַּ"
+                port.textContent="ka"
+              
+                
+            } else {
+              form.textContent=form.textContent+"כַּ"
+              port.textContent=port.textContent+"ka"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==12){
+              if (form.textContent=="") {
+                form.textContent="כַ"
+                port.textContent="cha"
+              
+                
+            } else {
+              form.textContent=form.textContent+"כַ"
+              port.textContent=port.textContent+"cha"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==13){
+              if (form.textContent=="") {
+                form.textContent="לַ"
+                port.textContent="la"
+              
+                
+            } else {
+              form.textContent=form.textContent+"לַ"
+              port.textContent=port.textContent+"la"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==14){
+              if (form.textContent=="") {
+                form.textContent="מַ"
+                port.textContent="ma"
+              
+                
+            } else {
+              form.textContent=form.textContent+"מַ"
+              port.textContent=port.textContent+"ma"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==15){
+              if (form.textContent=="") {
+                form.textContent="נַ"
+                port.textContent="na"
+              
+                
+            } else {
+              form.textContent=form.textContent+"נַ"
+              port.textContent=port.textContent+"na"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==16){
+              if (form.textContent=="") {
+                form.textContent="סַ"
+                port.textContent="sa"
+              
+                
+            } else {
+              form.textContent=form.textContent+"סַ"
+              port.textContent=port.textContent+"sa"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==17){
+              if (form.textContent=="") {
+                form.textContent="עַ"
+                port.textContent="a"
+              
+                
+            } else {
+              form.textContent=form.textContent+"עַ"
+              port.textContent=port.textContent+"a"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==18){
+              if (form.textContent=="") {
+                form.textContent="פַ"
+                port.textContent="fa"
+              
+                
+            } else {
+              form.textContent=form.textContent+"פַ"
+              port.textContent=port.textContent+"fa"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==19){
+              if (form.textContent=="") {
+                form.textContent="פַּ"
+                port.textContent="pa"
+              
+                
+            } else {
+              form.textContent=form.textContent+"פַּ"
+              port.textContent=port.textContent+"pa"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==20){
+              if (form.textContent=="") {
+                form.textContent="צַ"
+                port.textContent="tsa"
+              
+                
+            } else {
+              form.textContent=form.textContent+"צַ"
+              port.textContent=port.textContent+"tsa"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==21){
+              if (form.textContent=="") {
+                form.textContent="קַ"
+                port.textContent="qa"
+              
+                
+            } else {
+              form.textContent=form.textContent+"קַ"
+              port.textContent=port.textContent+"qa"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==22){
+              if (form.textContent=="") {
+                form.textContent="רַ"
+                port.textContent="ra"
+              
+                
+            } else {
+              form.textContent=form.textContent+"רַ"
+              port.textContent=port.textContent+"ra"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==23){
+              if (form.textContent=="") {
+                form.textContent="שַׁ"
+                port.textContent="sha"
+              
+                
+            } else {
+              form.textContent=form.textContent+"שַׁ"
+              port.textContent=port.textContent+"sha"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==24){
+              if (form.textContent=="") {
+                form.textContent="שַׂ"
+                port.textContent="sa"
+              
+                
+            } else {
+              form.textContent=form.textContent+"שַׂ"
+              port.textContent=port.textContent+"sa"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==25){
+              if (form.textContent=="") {
+                form.textContent="תַ"
+                port.textContent="ta"
+              
+                
+            } else {
+              form.textContent=form.textContent+"תַ"
+              port.textContent=port.textContent+"ta"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==26){
+              if (form.textContent=="") {
+                form.textContent="בַ"
+                port.textContent="va"
+              
+                
+            } else {
+              form.textContent=form.textContent+"בַ"
+              port.textContent=port.textContent+"va"
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            
+
+
+
         })
 
+        /**********segol vogal ê curta*****************************/
         v8.addEventListener("click",() =>{
-          alert("fuciona e curto")
+          
+          if(com==1){
+              if (form.textContent=="") {
+                form.textContent="אֶ"
+                port.textContent="e"
+              
+                
+            } else {
+              form.textContent=form.textContent+"אֶ"
+              port.textContent=port.textContent+"e" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==2){
+              if (form.textContent=="") {
+                form.textContent="אֶ"
+                port.textContent="be"
+              
+                
+            } else {
+              form.textContent=form.textContent+"אֶ"
+              port.textContent=port.textContent+"be" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==3){
+              if (form.textContent=="") {
+                form.textContent="גֶ"
+                port.textContent="ge"
+              
+                
+            } else {
+              form.textContent=form.textContent+"גֶ"
+              port.textContent=port.textContent+"ge" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==4){
+              if (form.textContent=="") {
+                form.textContent="דֶ"
+                port.textContent="de"
+              
+                
+            } else {
+              form.textContent=form.textContent+"דֶ"
+              port.textContent=port.textContent+"de" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==5){
+              if (form.textContent=="") {
+                form.textContent="הֶ"
+                port.textContent="he"
+              
+                
+            } else {
+              form.textContent=form.textContent+"הֶ"
+              port.textContent=port.textContent+"he" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==6){
+              if (form.textContent=="") {
+                form.textContent="וֶ"
+                port.textContent="ve"
+              
+                
+            } else {
+              form.textContent=form.textContent+"וֶ"
+              port.textContent=port.textContent+"ve" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==7){
+              if (form.textContent=="") {
+                form.textContent="זֶ"
+                port.textContent="ze"
+              
+                
+            } else {
+              form.textContent=form.textContent+"זֶ"
+              port.textContent=port.textContent+"ze" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==8){
+              if (form.textContent=="") {
+                form.textContent="חֶ"
+                port.textContent="che"
+              
+                
+            } else {
+              form.textContent=form.textContent+"חֶ"
+              port.textContent=port.textContent+"che" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==9){
+              if (form.textContent=="") {
+                form.textContent="טֶ"
+                port.textContent="te"
+              
+                
+            } else {
+              form.textContent=form.textContent+"טֶ"
+              port.textContent=port.textContent+"te" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==10){
+              if (form.textContent=="") {
+                form.textContent="יֶ"
+                port.textContent="ye"
+              
+                
+            } else {
+              form.textContent=form.textContent+"יֶ"
+              port.textContent=port.textContent+"ye" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==11){
+              if (form.textContent=="") {
+                form.textContent="כֶּ"
+                port.textContent="ke"
+              
+                
+            } else {
+              form.textContent=form.textContent+"כֶּ"
+              port.textContent=port.textContent+"ke" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==12){
+              if (form.textContent=="") {
+                form.textContent="כֶ"
+                port.textContent="che"
+              
+                
+            } else {
+              form.textContent=form.textContent+"כֶ"
+              port.textContent=port.textContent+"che" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==13){
+              if (form.textContent=="") {
+                form.textContent="לֶ"
+                port.textContent="le"
+              
+                
+            } else {
+              form.textContent=form.textContent+"לֶ"
+              port.textContent=port.textContent+"le" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==14){
+              if (form.textContent=="") {
+                form.textContent="מֶ"
+                port.textContent="me"
+              
+                
+            } else {
+              form.textContent=form.textContent+"מֶ"
+              port.textContent=port.textContent+"me" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==15){
+              if (form.textContent=="") {
+                form.textContent="נֶ"
+                port.textContent="ne"
+              
+                
+            } else {
+              form.textContent=form.textContent+"נֶ"
+              port.textContent=port.textContent+"ne" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==16){
+              if (form.textContent=="") {
+                form.textContent="סֶ"
+                port.textContent="se"
+              
+                
+            } else {
+              form.textContent=form.textContent+"סֶ"
+              port.textContent=port.textContent+"se" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==17){
+              if (form.textContent=="") {
+                form.textContent="עֶ"
+                port.textContent="e"
+              
+                
+            } else {
+              form.textContent=form.textContent+"עֶ"
+              port.textContent=port.textContent+"e" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==18){
+              if (form.textContent=="") {
+                form.textContent="פֶ"
+                port.textContent="fe"
+              
+                
+            } else {
+              form.textContent=form.textContent+"פֶ"
+              port.textContent=port.textContent+"fe" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==19){
+              if (form.textContent=="") {
+                form.textContent="פֶּ"
+                port.textContent="pe"
+              
+                
+            } else {
+              form.textContent=form.textContent+"פֶּ"
+              port.textContent=port.textContent+"pe" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==20){
+              if (form.textContent=="") {
+                form.textContent="צֶ"
+                port.textContent="tse"
+              
+                
+            } else {
+              form.textContent=form.textContent+"צֶ"
+              port.textContent=port.textContent+"tse" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==21){
+              if (form.textContent=="") {
+                form.textContent="קֶ"
+                port.textContent="qe"
+              
+                
+            } else {
+              form.textContent=form.textContent+"קֶ"
+              port.textContent=port.textContent+"qe" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==22){
+              if (form.textContent=="") {
+                form.textContent="רֶ"
+                port.textContent="re"
+              
+                
+            } else {
+              form.textContent=form.textContent+"רֶ"
+              port.textContent=port.textContent+"re" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==23){
+              if (form.textContent=="") {
+                form.textContent="שֶׁ"
+                port.textContent="she"
+              
+                
+            } else {
+              form.textContent=form.textContent+"שֶׁ"
+              port.textContent=port.textContent+"she" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==24){
+              if (form.textContent=="") {
+                form.textContent="שֶׂ"
+                port.textContent="se"
+              
+                
+            } else {
+              form.textContent=form.textContent+"שֶׂ"
+              port.textContent=port.textContent+"se" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==25){
+              if (form.textContent=="") {
+                form.textContent="תֶ"
+                port.textContent="te"
+              
+                
+            } else {
+              form.textContent=form.textContent+"תֶ"
+              port.textContent=port.textContent+"te" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==26){
+              if (form.textContent=="") {
+                form.textContent="בֶ"
+                port.textContent="ve"
+              
+                
+            } else {
+              form.textContent=form.textContent+"בֶ"
+              port.textContent=port.textContent+"ve" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            
+
+            
+
+
+
+
         })
 
+        /********hchataf Patah vogal a reduzida******************************/
         v9.addEventListener("click",() =>{
-          alert("fuciona  a reduzida")
+          
+          if(com==1){
+              if (form.textContent=="") {
+                form.textContent="אֲ"
+                port.textContent="a"
+              
+                
+            } else {
+              form.textContent=form.textContent+"אֲ"
+              port.textContent=port.textContent+"a" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==2){
+             alert("essa vogal só é usada com a letra  Alef e ayin e zayin")
+            }
+            if(com==3){
+              alert("essa vogal só é usada com a letra  Alef e ayin e zayin")
+            }
+            if(com==4){
+              alert("essa vogal só é usada com a letra  Alef e ayin e zayin")
+            }
+            if(com==5){
+              alert("essa vogal só é usada com a letra  Alef e ayin e zayin")
+            }
+            if(com==6){
+              alert("essa vogal só é usada com a letra  Alef e ayin e zayin")
+            }
+            if(com==7){
+              if (form.textContent=="") {
+                form.textContent="זֲ"
+                port.textContent="za"
+              
+                
+            } else {
+              form.textContent=form.textContent+"זֲ"
+              port.textContent=port.textContent+"za" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==8){
+              alert("essa vogal só é usada com a letra  Alef e ayin e zayin")
+            }
+            if(com==9){
+              alert("essa vogal só é usada com a letra  Alef e ayin e zayin")
+            }
+            if(com==10){
+              alert("essa vogal só é usada com a letra  Alef e ayin e zayin")
+            }
+            if(com==11){
+              alert("essa vogal só é usada com a letra  Alef e ayin e zayin")
+            }
+            if(com==12){
+              alert("essa vogal só é usada com a letra  Alef e ayin e zayin")
+            }
+            if(com==13){
+              alert("essa vogal só é usada com a letra  Alef e ayin e zayin")
+            }
+            if(com==14){
+              alert("essa vogal só é usada com a letra  Alef e ayin e zayin")
+            }
+            if(com==15){
+              alert("essa vogal só é usada com a letra  Alef e ayin e zayin")
+            }
+            if(com==16){
+              alert("essa vogal só é usada com a letra  Alef e ayin e zayin")
+            }
+            if(com==17){
+              if (form.textContent=="") {
+                form.textContent="עֲ"
+                port.textContent="a"
+              
+                
+            } else {
+              form.textContent=form.textContent+"עֲ"
+              port.textContent=port.textContent+"a" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==18){
+              alert("essa vogal só é usada com a letra  Alef e ayin e zayin")
+            }
+            if(com==20){
+              alert("essa vogal só é usada com a letra  Alef e ayin e zayin")
+            }
+            if(com==21){
+              alert("essa vogal só é usada com a letra  Alef e ayin e zayin")
+            }
+            if(com==22){
+              alert("essa vogal só é usada com a letra  Alef e ayin e zayin")
+            }
+            if(com==23){
+              alert("essa vogal só é usada com a letra  Alef e ayin e zayin")
+            }
+            if(com==24){
+              alert("essa vogal só é usada com a letra  Alef e ayin e zayin")
+            }
+            if(com==25){
+              alert("essa vogal só é usada com a letra  Alef e ayin e zayin")
+            }
+            if(com==26){
+              alert("essa vogal só é usada com a letra  Alef e ayin e zayin")
+            }
+
+
+
+        })
+
+        /***********hiriq-yod vogal i longa********************************/
+        v10.addEventListener("click", () =>{
+          if(com==1){
+              if (form.textContent=="") {
+                form.textContent="אִי"
+                port.textContent="i"
+              
+                
+            } else {
+              form.textContent=form.textContent+"אִי"
+              port.textContent=port.textContent+"i" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==2){
+              if (form.textContent=="") {
+                form.textContent="בִּי"
+                port.textContent="bi"
+              
+                
+            } else {
+              form.textContent=form.textContent+"בִּי"            
+               port.textContent=port.textContent+"bi" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==3){
+              if (form.textContent=="") {
+                form.textContent="גִי"
+                port.textContent="gi"
+              
+                
+            } else {
+              form.textContent=form.textContent+"גִי"
+              port.textContent=port.textContent+"gi" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==4){
+              if (form.textContent=="") {
+                form.textContent="דִי"
+                port.textContent="di"
+              
+                
+            } else {
+              form.textContent=form.textContent+"דִי"
+              port.textContent=port.textContent+"gi" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==5){
+              if (form.textContent=="") {
+                form.textContent="הִי"
+                port.textContent="hi"
+              
+                
+            } else {
+              form.textContent=form.textContent+"הִי"
+              port.textContent=port.textContent+"hi" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==6){
+              if (form.textContent=="") {
+                form.textContent="וִי"
+                port.textContent="vi"
+              
+                
+            } else {
+              form.textContent=form.textContent+"וִי"
+              port.textContent=port.textContent+"vi" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==7){
+              if (form.textContent=="") {
+                form.textContent="זִי"
+                port.textContent="zi"
+              
+                
+            } else {
+              form.textContent=form.textContent+"זִי"
+              port.textContent=port.textContent+"zi" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==8){
+              if (form.textContent=="") {
+                form.textContent="חִי"
+                port.textContent="chi"
+              
+                
+            } else {
+              form.textContent=form.textContent+"חִי"
+              port.textContent=port.textContent+"chi" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==9){
+              if (form.textContent=="") {
+                form.textContent="טִי"
+                port.textContent="ti"
+              
+                
+            } else {
+              form.textContent=form.textContent+"טִי"
+              port.textContent=port.textContent+"ti" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==10){
+              if (form.textContent=="") {
+                form.textContent="יִי"
+                port.textContent="yi"
+              
+                
+            } else {
+              form.textContent=form.textContent+"יִי"
+              port.textContent=port.textContent+"yi" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==11){
+              if (form.textContent=="") {
+                form.textContent="כִּי"
+                port.textContent="ki"
+              
+                
+            } else {
+              form.textContent=form.textContent+"כִּי"
+              port.textContent=port.textContent+"ki" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==12){
+              if (form.textContent=="") {
+                form.textContent="כִי"
+                port.textContent="chi"
+              
+                
+            } else {
+              form.textContent=form.textContent+"כִי"
+              port.textContent=port.textContent+"chi" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==13){
+              if (form.textContent=="") {
+                form.textContent="לִי"
+                port.textContent="li"
+              
+                
+            } else {
+              form.textContent=form.textContent+"לִי"
+              port.textContent=port.textContent+"li" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==14){
+              if (form.textContent=="") {
+                form.textContent="מִי"
+                port.textContent="mi"
+              
+                
+            } else {
+              form.textContent=form.textContent+"מִי"
+              port.textContent=port.textContent+"mi" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==15){
+              if (form.textContent=="") {
+                form.textContent="נִי"
+                port.textContent="ni"
+              
+                
+            } else {
+              form.textContent=form.textContent+"נִי"
+              port.textContent=port.textContent+"ni" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==16){
+              if (form.textContent=="") {
+                form.textContent="סִי"
+                port.textContent="si"
+              
+                
+            } else {
+              form.textContent=form.textContent+"סִי"
+              port.textContent=port.textContent+"si" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==17){
+              if (form.textContent=="") {
+                form.textContent="עִי"
+                port.textContent="i"
+              
+                
+            } else {
+              form.textContent=form.textContent+"עִי"
+              port.textContent=port.textContent+"i" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==18){
+              if (form.textContent=="") {
+                form.textContent="פִי"
+                port.textContent="fi"
+              
+                
+            } else {
+              form.textContent=form.textContent+"פִי"
+              port.textContent=port.textContent+"fi" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==19){
+              if (form.textContent=="") {
+                form.textContent="פִּי"
+                port.textContent="pi"
+              
+                
+            } else {
+              form.textContent=form.textContent+"פִּי"
+              port.textContent=port.textContent+"pi" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==20){
+              if (form.textContent=="") {
+                form.textContent="צִי"
+                port.textContent="tsi"
+              
+                
+            } else {
+              form.textContent=form.textContent+"צִי"
+              port.textContent=port.textContent+"tsi" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==21){
+              if (form.textContent=="") {
+                form.textContent="קִי"
+                port.textContent="qi"
+              
+                
+            } else {
+              form.textContent=form.textContent+"קִי"
+              port.textContent=port.textContent+"qi" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==22){
+              if (form.textContent=="") {
+                form.textContent="רִי"
+                port.textContent="ri"
+              
+                
+            } else {
+              form.textContent=form.textContent+"רִי"
+              port.textContent=port.textContent+"ri" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==23){
+              if (form.textContent=="") {
+                form.textContent="שִׁי"
+                port.textContent="shi"
+              
+                
+            } else {
+              form.textContent=form.textContent+"שִׁי"
+              port.textContent=port.textContent+"shi" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==24){
+              if (form.textContent=="") {
+                form.textContent="שִׂי"
+                port.textContent="si"
+              
+                
+            } else {
+              form.textContent=form.textContent+"שִׂי"
+              port.textContent=port.textContent+"si" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==25){
+              if (form.textContent=="") {
+                form.textContent="תִי"
+                port.textContent="ti"
+              
+                
+            } else {
+              form.textContent=form.textContent+"תִי"
+              port.textContent=port.textContent+"ti" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+            if(com==26){
+              if (form.textContent=="") {
+                form.textContent="בִי"
+                port.textContent="vi"
+              
+                
+            } else {
+              form.textContent=form.textContent+"בִי"
+              port.textContent=port.textContent+"vi" 
+              
+            }
+             caixa.style.display="none"
+             tecla.style.display="block" 
+             com=0
+            }
+
+
+
+
+        })
+
+     
+
+      /************chatef-segol vogal é reduzida***************************/
+        v12.addEventListener("click", () =>{
+         alert("fuciona chatef-segol é reduzida")
+
         })
 
 
